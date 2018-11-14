@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import '_vars';
 @import 'modules/_header';
 @import 'modules/_content';
@@ -15,3 +16,26 @@ img
 	margin: 0;
 	padding: 0;
 }
+
+@font-face {
+    font-family: 'lustriaregular';
+    src: url('../fonts/lustria-regular-webfont.eot');
+    src: url('../fonts/lustria-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lustria-regular-webfont.woff') format('woff'),
+    url('../fonts/lustria-regular-webfont.ttf') format('truetype'),
+    url('../fonts/lustria-regular-webfont.svg#lustriaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lato-regular-webfont.woff') format('woff'),
+    url('../fonts/lato-regular-webfont.ttf') format('truetype'),
+    url('../fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
