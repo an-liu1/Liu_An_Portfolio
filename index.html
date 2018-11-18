@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liu_An_Portfolio</title>
     <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   </head>
   <body data-mce-style="color: #0000ff;">
 	<h1 class="hide">Liu An Portfolio</h1>
-   	<header id="mainHeader" class="row">
-      <div data-sticky-container>
+	<div class="preloader"></div>
+   	<header id="mainHeader">
+      <div data-sticky-container class="optopp">
   <div class="title-bar" data-sticky data-options="marginTop:0;">
     <div class="title-bar-left"><p>Liu An Portfolio</p></div>
     <div class="title-bar-right">
@@ -37,7 +39,7 @@
   </div>
 </div>
    		<div id="banner">
-   			<img src="images/banner.jpg" alt="banner" class="banner">
+   			<img src="images/banner.png" alt="banner" class="banner">
 		</div>
 		<div class="my_info">
 		<div class="name" >	
@@ -66,14 +68,9 @@
 				<button class="close-button" data-close aria-label="Close Reveal" type="button">
 				<span >&times;</span>
 				</button>
-				<img src="images/portrait_open.jpg" alt="images" id ="portrait1">
+				<img class="img0" alt="images" id ="portrait1">
 				<hr style="border:0;background-color:#ff0000;height:1px;">
-				<p  style="text-indent: 30px;">My one year of studying experience as a student (majored in front end developing) has honed my CSS3
-						and HTML5 skills, as well as my knowledge of responsive design and project management. I have the
-						skills to create the perfect HTML, which makes it easy to find and fix any problems that arise later. Three
-						years of experience in student council, getting involved in my school and faculty events with most
-						students. Experience in entrepreneurial business and social media management when I create my own
-						business.</p>
+				<p  style="text-indent: 30px;" class="para0"></p>
 				</div>
 				<hr style="border:0;background-color:#ff0000;height:1px;">
 				<ul class="address">
@@ -87,13 +84,13 @@
 				<h2>My Program</h2>
 				<iframe src="https://www.youtube.com/embed/HMGYqL_j4v8" allowfullscreen></iframe>
 			</div>
-		  </section>
+	</section>
 		  
 	<section id="contentWidth">
-			<div class="small-12 columns large-12"  id="info">
-				<h2 class="title Sp-title">About Me</h2>
+			<h2 class="title Sp-title">About Me</h2>
+			<div id="info">
 				<div>
-					<p class="na">Hello, I am An Liu (Andy). I graduated from Jiangxi Agriculture University majoring in Software Engineering, and I am currently studying at Fanshawe College in the program of Interactive Media Design. I believe that the skills I have acquired in school and the experience I have gained in my life make me an ideal candidate for the job in your company. I believe my interpersonal skills, quick learning ability, and working experience can contribute to your team.</p>
+					<p class="na">I am An Liu (Andy). I graduated from Jiangxi Agriculture University majoring in Software Engineering, and I am currently studying at Fanshawe College in the program of Interactive Media Design. I believe that the skills I have acquired in school and the experience I have gained in my life make me an ideal candidate for the job in your company. I believe my interpersonal skills, quick learning ability, and working experience can contribute to your team.</p>
 				</div>
 					<h2 class="title">My Skills</h2>
 					<div class="skill-grids">
@@ -142,35 +139,80 @@
 							</div>
 
 			</div>
-			<section class="row" id="experience">
-					<h2 class="title">Experience</h2>
+			<section id="experience">
+					<h2 class="title">Education & Experience</h2>
+					<div class="Sbutton">
+						<a class="button success BuED animated slow">Education</a>
+						<a class="button alert BuEX animated slow">Experience</a>
+					</div>
+					<section class="education">
+						<h3>EDUCATION</h3>
 					<div class="st">
-						<div class="stleft la">2018.01-2019.04</div>
-						<div class="stright ra"><div>Fanshawe Chinese Society</div>
+						<div class="stleft la animated">2017.09-2019.04</div>
+						<div class="stright ra"><div class="Rtitle animated">Fanshawe College</div>
+						<p><b>Interactive Media Design</b><br>
+							GPA: 3.70/4.30<br>
+							Related Courses:<br>
+							• Design & Image  &nbsp
+							• Digital Media Theory & Project Management<br>
+							• Web development  &nbsp
+							• Multimedia Production<br>
+							• Multimedia Authoring  &nbsp
+							• Motion Design</p>
+					</div>
+					<div class="st1">
+							<div class="stright lb"><div class="lbd Rtitle animated">Trinity Western University</div>
+							<p class="inter"><b>Master of Business Administration </b><br>One-year MBA program starts in March and is designed for high-achieving leaders who are ready to accelerate their career success. Join one of the top MBA programs in Canada today. Completed one semester study in management</p>
+						</div>
+							<div class="stleft rb animated">2016.09-2016.12</div>
+					</div>
+					<div class="st">
+							<div class="stleft la animated">2012.09-2016.06</div>
+							<div class="stright ra"><div class="Rtitle animated">JiangXi Agriculture University</div>
+							<p><b>Software Engineering</b><br>• CGPA: 3.50/4.30<br>
+								Related Courses:<br>
+								• Web development technology (Java or .net)&nbsp
+								• Visual modeling and UML<br>
+								• Web development foundation &nbsp
+								• JAVA program design<br>
+								• Large database technology (oracle) &nbsp
+								• Database principles and application 
+								</p>
+						</div>
+				</section>
+
+					<section class="experience">
+						<h3>EXPERIENCE</h3>
+					<div class="st">
+						<div class="stleft la animated">2018.01-2019.04</div>
+						<div class="stright ra"><div class="Rtitle animated">Fanshawe Chinese Society</div>
 						<p><b>President</b><br>•	To serve students and bring benefits to them. For example; let students get to know each other and integrate into Canadian life as soon as possible.
 							<br>•	To help students in our club to improve themselves, like social skills, confidence, etc.</p>
 					</div>
 					<div class="st1">
-							<div class="stright lb"><div class="lbd">JiangXi Agriculture University</div>
+							<div class="stright lb"><div class="lbd Rtitle animated">JiangXi Agriculture University</div>
 							<p class="inter"><b>International Volunteer </b><br>The 3rd World Conference on Low-carbon Economy and the 7th China Green Food Expo<br>  
 								•	Provided excellent service to guests in attendance and was responsible for helping to organize the guest reception ceremony.</p>
 						</div>
-							<div class="stleft rb">2014.11</div>
+							<div class="stleft rb animated">2014.11</div>
 					</div>
 					<div class="st">
-							<div class="stleft la">2015.12-2016.04</div>
-							<div class="stright ra"><div>Global Education & Technology Co., Ltd.</div>
+							<div class="stleft la animated">2015.12-2016.04</div>
+							<div class="stright ra"><div class="Rtitle animated">Global Education & Technology Co., Ltd.</div>
 							<p><b>Teaching Assistant</b><br>•	Demonstrated ability to coordinate with professors based on the course schedule<br>
 								•	Gained experience of marking students’ assignments accurately with strong work ethic</p>
 						</div>
 						<div class="st1">
-								<div class="stright lb"><div class="lbd">Farmhouse</div>
+								<div class="stright lb"><div class="lbd Rtitle animated">Farmhouse</div>
 								<p class="inter"><b>Startup CEO </b><br>•		Demonstrated professional and technical ability, management ability, social communication skills, innovation ability, and strong comprehensive ability.</p>
 							</div>
-								<div class="stleft rb">2014.09-2017.12</div>
-				 </section>
+								<div class="stleft rb animated">2014.09-2017.12</div>
+					</div>
 				</section>
-   	<section class="row" id="project">
+				 </section>
+
+
+   	<section id="project">
 		   <h2 class="title">Projects</h2>
 			<div class="wraper">
 		   <div class="p1">
@@ -178,8 +220,10 @@
 			  <div class="medium reveal" id="photo1" data-reveal>
 			  <button class="close-button" data-close aria-label="Close Reveal" type="button">
 			  <span >&times;</span>
-			  </button>
-			  <img src="images/p1_open.png" alt="image">
+				</button>
+				<p class="para1" style="text-indent: 30px; font-size: 1.3em;"></p>
+				<hr style="border:0;background-color:#ff0000;height:1px;">
+			  <img class="img1" alt="image" id="portrait1">
 			  </div>
 		  </div>
 		  <div class="p3">
@@ -193,14 +237,15 @@
 									<li class="is-active orbit-slide">
 										<figure class="orbit-figure">
 												<a data-open="photo5"><img class="orbit-image" src="images/slide1.png" alt="Space">
-													<figcaption class="orbit-caption">Agency X--- Introduce team ------- https://github.com/an-liu1/A2_Week4</figcaption>
+													<figcaption class="orbit-caption">Agency X--- A site to introduce our team ------- https://github.com/an-liu1/A2_Week4</figcaption>
 												</a>
 												<div class="medium reveal" id="photo5" data-reveal>
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img src="images/slide1_open.png" alt="image">
-												<p style="text-indent:30px;"><b>Agency X</b> --- this project is a single-page application that we build to introduce my team and showcase the work. An Liu and Chaochao Li cooperate together to finish this project. An Liu takes the responsibility for typing code; meanwhile, Chaochao Li is responsible for designing.</p>
+												<img class="img2" alt="image" id="portrait1">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para2"></p>
 										</figure>
 									</li>
 									<li class="orbit-slide">
@@ -212,8 +257,9 @@
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img src="images/slide2_open.png" alt="image">
-												<p style="text-indent:30px;"><b>InfoGraphic about movies</b> --- this project is a poster which includes a lot of data about the hottest movies aomng this year. Compared with the traditional infographics, this one will add some features to make it more dynamic. In this project, it will list some information of the top 5 grossing movies, such as movie's name, cover image, description, and a form of grossing.</p>
+												<img class="img3" alt="image" id="portrait1">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para3"></p>
 										</figure>
 									</li>
 									<li class="orbit-slide">
@@ -225,21 +271,23 @@
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img src="images/slide3_open.png" alt="image">
-												<p style="text-indent:30px;"><b>InfoGraphic about movies</b> --- this project is a poster which includes a lot of data about the hottest movies aomng this year. Compared with the traditional infographics, this one will add some features to make it more dynamic. In this project, it will list some information of the top 5 grossing movies, such as movie's name, cover image, description, and a form of grossing.</p>
+												<img class="img4" alt="image" id="portrait1">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para4"></p>
 										</figure>
 									</li>
 									<li class="orbit-slide">
 											<figure class="orbit-figure">
 													<a data-open="photo8"><img class="orbit-image" src="images/slide4.png" alt="Space">
-														<figcaption class="orbit-caption">College Website --- write CSS style by JS</figcaption>
+														<figcaption class="orbit-caption">WorldPress Project --- Being familiar with worldpres website building</figcaption>
 													</a>
 													<div class="medium reveal" id="photo8" data-reveal>
 													<button class="close-button" data-close aria-label="Close Reveal" type="button">
 													<span >&times;</span>
 													</button>
-													<img src="images/slide4.png" alt="image">
-													<p style="text-indent:30px;"><b>DEX • eEdu Student Portal</b> --- </p>
+													<img class="img5" alt="image" id="portrait1">
+													<hr style="border:0;background-color:#ff0000;height:1px;">
+													<p style="text-indent:30px; font-size: 1.3em;" class="para5"></p>
 											</figure>
 										</li>
 								</ul>
@@ -254,12 +302,14 @@
 					<button class="close-button" data-close aria-label="Close Reveal" type="button">
 					<span >&times;</span>
 					</button>
-					<img src="images/p2_open.png" alt="image">
+					<p  style="text-indent: 30px;  font-size: 1.3em;" class="para6"></p>
+					<hr style="border:0;background-color:#ff0000;height:1px;">
+					<img class="img6" alt="image" id="portrait1">
 					</div>
 				</div>
 				<div class="ads">
 					<div class="video">
-			<video poster="images/banner.png" class="video" controls>
+			<video poster="images/slide2.png" class="video" controls>
 				<source src="video/teaser_trailer.mp4" type="video/mp4">
 				<source src="video/teaser_trailer.mov" type="video/mov">
 			</video>
@@ -283,7 +333,9 @@
 							<button class="close-button" data-close aria-label="Close Reveal" type="button">
 							<span >&times;</span>
 							</button>
-							<img src="images/p4_open.png" alt="image">
+							<p  style="text-indent: 30px; font-size: 1.3em;" class="para7"></p>
+							<hr style="border:0;background-color:#ff0000;height:1px;">
+							<img class="img7" alt="image" id="portrait1">
 							</div>
 						</div>
 				</div>
@@ -291,7 +343,7 @@
    	</section>
 
   
-   	<section class="row" id="contact">
+   	<section id="contact">
   		 <h2 class="title">Contact</h2>
            
 	   </section>
