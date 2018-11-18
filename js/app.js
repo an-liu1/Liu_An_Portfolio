@@ -1,14 +1,75 @@
 (() => {
-$(document).foundation()
-var svgObject1 = document.querySelector('.s1').contentDocument.querySelector('#HTML5');
+     $(document).foundation()
 
-console.log(svgObject1);
-
-function SvgFun() {
-	this.style.display = "none";
-}
+	const education = document.querySelector('.BuED'),
+		  experience = document.querySelector('.BuEX'),
+		  animatation1s = document.querySelectorAll('.stleft'),
+		  animatation2s = document.querySelectorAll('.Rtitle');
 
 
+	function openEducaion() {
+		document.querySelector('.education').style.display = 'block';
+		document.querySelector('.experience').style.display = 'none';
+		education.classList.add('zoomInLeft');
+		experience.classList.remove('zoomInRight');
+	}
 
-svgObject1.addEventListener('mouseover', SvgFun);
+	function openExperience() {
+		document.querySelector('.education').style.display = 'none';
+		document.querySelector('.experience').style.display = 'block';
+		education.classList.remove('zoomInLeft');
+		experience.classList.add('zoomInRight');
+	}
+
+	function openanimatate1() {
+		this.classList.add('flash');
+	}
+
+	function closeanimatate1() {
+		this.classList.remove('flash');
+	}
+
+	function openanimatate2() {
+		this.classList.add('pulse');
+	}
+
+	function closeanimatate2() {
+		this.classList.remove('pulse');
+	}
+
+	function loadDoc(data) {
+		var arr = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
+        var obj = {}
+        for(var title in arr){
+            obj[title]=arr[title]
+		}
+		console.log(obj);
+		var i;
+		for(i=0;i<=7;){
+			document.querySelector(".img" + i).src = `images/${obj[i].photo}`;
+			document.querySelector(".para" + i).textContent = obj[i].description;
+			i++;
+		}
+		
+	}
+	
+	education.addEventListener('click', openEducaion);
+	experience.addEventListener('click', openExperience);
+	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseover', openanimatate1));
+	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseout', closeanimatate1));
+	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseover', openanimatate2));
+	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseout', closeanimatate2));
+	
+	function getData(){
+		fetch('./admin/config.php')
+		.then(res => res.json())
+		.then(data => {
+			console.log(data);
+			loadDoc(data);
+		})
+		.catch(function(error){
+			console.log(error);
+		});
+	}
+	getData();
 })();

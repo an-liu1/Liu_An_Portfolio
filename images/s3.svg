@@ -36,6 +36,12 @@
         fill: #fff;
         font-family: "Times New Roman";
         font-weight: 700;
+        cursor: pointer;
+      }
+      .cls-1:hover {
+        opacity: 0.8;
+        fill: #37f13b;
+        font-size: 62.667px;
       }
     </style>
   </defs>
