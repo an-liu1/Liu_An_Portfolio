@@ -63,12 +63,12 @@
 	
   	<section id="aboutme">
 		<div class="left">
-				<a data-open="portrait"><img src="images/portrait.jpg" alt="image" width="150" height="150" id ="portrait1"></a>
+				<a data-open="portrait"><img src="images/portrait.jpg" alt="image" width="150" height="150" class ="portrait1"></a>
 				<div class="medium reveal" id="portrait" data-reveal>
 				<button class="close-button" data-close aria-label="Close Reveal" type="button">
 				<span >&times;</span>
 				</button>
-				<img class="img0" alt="images" id ="portrait1">
+				<img class="img0 portrait1" alt="images">
 				<hr style="border:0;background-color:#ff0000;height:1px;">
 				<p  style="text-indent: 30px;" class="para0"></p>
 				</div>
@@ -86,7 +86,7 @@
 			</div>
 	</section>
 		  
-	<section id="contentWidth">
+	<div id="contentWidth">
 			<h2 class="title Sp-title">About Me</h2>
 			<div id="info">
 				<div>
@@ -102,18 +102,18 @@
 				<div class="html5">
 					<p style="font-weight:bold;">HTML 5</p>
 				<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-					<span class="progress-meter" style="width: 85%">
+					<div class="progress-meter" style="width: 85%">
 					  <p class="progress-meter-text">85%</p>
-					</span>
+					</div>
 				  </div>
 				</div>
 				<div class="css3">
 						<p style="font-weight:bold;">CSS 3</p>
 					<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
 							<div class="warning progress">
-						<span class="progress-meter" style="width: 80%">
+						<div class="progress-meter" style="width: 80%">
 						  <p class="progress-meter-text">80%</p>
-						</span>
+						</div>
 						</div>
 					  </div>
 					</div>
@@ -121,9 +121,9 @@
 							<p style="font-weight:bold;">JavaScript</p>
 						<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
 								<div class="success progress">
-									<span class="progress-meter" style="width: 60%">
+									<div class="progress-meter" style="width: 60%">
 							  <p class="progress-meter-text">60%</p>
-							</span>
+									</div>
 								</div>
 						  </div>
 						</div>
@@ -131,9 +131,9 @@
 								<p style="font-weight:bold;">PHP</p>
 							<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
 									<div class="alert progress">
-										<span class="progress-meter" style="width: 70%">
+										<div class="progress-meter" style="width: 70%">
 								  <p class="progress-meter-text">70%</p>
-								</span>
+										</div>
 									</div>
 							  </div>
 							</div>
@@ -153,13 +153,14 @@
 						<p><b>Interactive Media Design</b><br>
 							GPA: 3.70/4.30<br>
 							Related Courses:<br>
-							• Design & Image  &nbsp
+							• Design & Image  
 							• Digital Media Theory & Project Management<br>
-							• Web development  &nbsp
+							• Web development  
 							• Multimedia Production<br>
-							• Multimedia Authoring  &nbsp
+							• Multimedia Authoring  
 							• Motion Design</p>
 					</div>
+				</div>
 					<div class="st1">
 							<div class="stright lb"><div class="lbd Rtitle animated">Trinity Western University</div>
 							<p class="inter"><b>Master of Business Administration </b><br>One-year MBA program starts in March and is designed for high-achieving leaders who are ready to accelerate their career success. Join one of the top MBA programs in Canada today. Completed one semester study in management</p>
@@ -171,14 +172,15 @@
 							<div class="stright ra"><div class="Rtitle animated">JiangXi Agriculture University</div>
 							<p><b>Software Engineering</b><br>• CGPA: 3.50/4.30<br>
 								Related Courses:<br>
-								• Web development technology (Java or .net)&nbsp
+								• Web development technology (Java or .net)
 								• Visual modeling and UML<br>
-								• Web development foundation &nbsp
+								• Web development foundation 
 								• JAVA program design<br>
-								• Large database technology (oracle) &nbsp
+								• Large database technology (oracle) 
 								• Database principles and application 
 								</p>
 						</div>
+					</div>
 				</section>
 
 					<section class="experience">
@@ -188,6 +190,7 @@
 						<div class="stright ra"><div class="Rtitle animated">Fanshawe Chinese Society</div>
 						<p><b>President</b><br>•	To serve students and bring benefits to them. For example; let students get to know each other and integrate into Canadian life as soon as possible.
 							<br>•	To help students in our club to improve themselves, like social skills, confidence, etc.</p>
+					</div>
 					</div>
 					<div class="st1">
 							<div class="stright lb"><div class="lbd Rtitle animated">JiangXi Agriculture University</div>
@@ -202,6 +205,7 @@
 							<p><b>Teaching Assistant</b><br>•	Demonstrated ability to coordinate with professors based on the course schedule<br>
 								•	Gained experience of marking students’ assignments accurately with strong work ethic</p>
 						</div>
+					</div>
 						<div class="st1">
 								<div class="stright lb"><div class="lbd Rtitle animated">Farmhouse</div>
 								<p class="inter"><b>Startup CEO </b><br>•		Demonstrated professional and technical ability, management ability, social communication skills, innovation ability, and strong comprehensive ability.</p>
@@ -223,7 +227,7 @@
 				</button>
 				<p class="para1" style="text-indent: 30px; font-size: 1.3em;"></p>
 				<hr style="border:0;background-color:#ff0000;height:1px;">
-			  <img class="img1" alt="image" id="portrait1">
+			  <img class="img1 portrait1" alt="image">
 			  </div>
 		  </div>
 		  <div class="p3">
@@ -236,58 +240,62 @@
 								<ul class="orbit-container">
 									<li class="is-active orbit-slide">
 										<figure class="orbit-figure">
-												<a data-open="photo5"><img class="orbit-image" src="images/slide1.png" alt="Space">
+												<figure data-open="photo5"><img class="orbit-image" src="images/slide1.png" alt="Space">
 													<figcaption class="orbit-caption">Agency X--- A site to introduce our team ------- https://github.com/an-liu1/A2_Week4</figcaption>
-												</a>
+												</figure>
 												<div class="medium reveal" id="photo5" data-reveal>
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img class="img2" alt="image" id="portrait1">
+												<img class="img2 portrait1" alt="image">
 												<hr style="border:0;background-color:#ff0000;height:1px;">
 												<p style="text-indent:30px; font-size: 1.3em;" class="para2"></p>
+												</div>
 										</figure>
 									</li>
 									<li class="orbit-slide">
 										<figure class="orbit-figure">
-												<a data-open="photo6"><img class="orbit-image" src="images/slide2.png" alt="Space">
+												<figure data-open="photo6"><img class="orbit-image" src="images/slide2.png" alt="Space">
 													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</figcaption>
-												</a>
+												</figure>
 												<div class="medium reveal" id="photo6" data-reveal>
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img class="img3" alt="image" id="portrait1">
+												<img class="img3 portrait1" alt="image">
 												<hr style="border:0;background-color:#ff0000;height:1px;">
 												<p style="text-indent:30px; font-size: 1.3em;" class="para3"></p>
+												</div>
 										</figure>
 									</li>
 									<li class="orbit-slide">
 										<figure class="orbit-figure">
-												<a data-open="photo7"><img class="orbit-image" src="images/slide3.png" alt="Space">
+												<figure data-open="photo7"><img class="orbit-image" src="images/slide3.png" alt="Space">
 													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</figcaption>
-												</a>
+												</figure>
 												<div class="medium reveal" id="photo7" data-reveal>
 												<button class="close-button" data-close aria-label="Close Reveal" type="button">
 												<span >&times;</span>
 												</button>
-												<img class="img4" alt="image" id="portrait1">
+												<img class="img4 portrait1" alt="image">
 												<hr style="border:0;background-color:#ff0000;height:1px;">
 												<p style="text-indent:30px; font-size: 1.3em;" class="para4"></p>
+												</div>
 										</figure>
 									</li>
 									<li class="orbit-slide">
 											<figure class="orbit-figure">
-													<a data-open="photo8"><img class="orbit-image" src="images/slide4.png" alt="Space">
+													<figure data-open="photo8"><img class="orbit-image" src="images/slide4.png" alt="Space">
 														<figcaption class="orbit-caption">WorldPress Project --- Being familiar with worldpres website building</figcaption>
-													</a>
+													</figure>
 													<div class="medium reveal" id="photo8" data-reveal>
 													<button class="close-button" data-close aria-label="Close Reveal" type="button">
 													<span >&times;</span>
 													</button>
-													<img class="img5" alt="image" id="portrait1">
+													<img class="img5 portrait1" alt="image">
 													<hr style="border:0;background-color:#ff0000;height:1px;">
 													<p style="text-indent:30px; font-size: 1.3em;" class="para5"></p>
+													</div>
 											</figure>
 										</li>
 								</ul>
@@ -304,11 +312,11 @@
 					</button>
 					<p  style="text-indent: 30px;  font-size: 1.3em;" class="para6"></p>
 					<hr style="border:0;background-color:#ff0000;height:1px;">
-					<img class="img6" alt="image" id="portrait1">
+					<img class="img6 portrait1" alt="image">
 					</div>
 				</div>
 				<div class="ads">
-					<div class="video">
+				<div class="video">
 			<video poster="images/slide2.png" class="video" controls>
 				<source src="video/teaser_trailer.mp4" type="video/mp4">
 				<source src="video/teaser_trailer.mov" type="video/mov">
@@ -327,6 +335,7 @@
 				<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
 			 </div> -->
 			</div>
+		</div>
 					<div class="p4">
 							<a data-open="photo4"><img src="images/p4.png" alt="image"></a>
 							<div class="medium reveal" id="photo4" data-reveal>
@@ -335,18 +344,19 @@
 							</button>
 							<p  style="text-indent: 30px; font-size: 1.3em;" class="para7"></p>
 							<hr style="border:0;background-color:#ff0000;height:1px;">
-							<img class="img7" alt="image" id="portrait1">
+							<img class="img7 portrait1" alt="image">
 							</div>
 						</div>
 				</div>
-					</div>
+				</div>
    	</section>
 
   
    	<section id="contact">
   		 <h2 class="title">Contact</h2>
            
-	   </section>
+	</section>
+</div>
 
     <footer id="footerCon">
 		<h2 class="hide">mainFooter</h2>
