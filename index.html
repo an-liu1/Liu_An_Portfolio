@@ -39,7 +39,10 @@
   </div>
 </div>
    		<div id="banner">
-   			<img src="images/banner.png" alt="banner" class="banner">
+			<picture>
+			<source srcset="images/banner_mobile.png" media="(max-width: 640px)">
+			   <img src="images/banner.png" alt="banner" class="banner">
+			</picture>
 		</div>
 		<div class="my_info">
 		<div class="name" >	
@@ -162,10 +165,11 @@
 					</div>
 				</div>
 					<div class="st1">
+							<div class="stleft animated" id="mobile">2016.09-2016.12</div>
 							<div class="stright lb"><div class="lbd Rtitle animated">Trinity Western University</div>
 							<p class="inter"><b>Master of Business Administration </b><br>One-year MBA program starts in March and is designed for high-achieving leaders who are ready to accelerate their career success. Join one of the top MBA programs in Canada today. Completed one semester study in management</p>
 						</div>
-							<div class="stleft rb animated">2016.09-2016.12</div>
+							<div class="stleft rb animated" id="laptop">2016.09-2016.12</div>
 					</div>
 					<div class="st">
 							<div class="stleft la animated">2012.09-2016.06</div>
@@ -193,11 +197,12 @@
 					</div>
 					</div>
 					<div class="st1">
+							<div class="stleft animated" id="mobile1">2014.11</div>
 							<div class="stright lb"><div class="lbd Rtitle animated">JiangXi Agriculture University</div>
 							<p class="inter"><b>International Volunteer </b><br>The 3rd World Conference on Low-carbon Economy and the 7th China Green Food Expo<br>  
 								•	Provided excellent service to guests in attendance and was responsible for helping to organize the guest reception ceremony.</p>
 						</div>
-							<div class="stleft rb animated">2014.11</div>
+							<div class="stleft rb animated" id="laptop1">2014.11</div>
 					</div>
 					<div class="st">
 							<div class="stleft la animated">2015.12-2016.04</div>
@@ -207,10 +212,11 @@
 						</div>
 					</div>
 						<div class="st1">
+								<div class="stleft animated" id="mobile2">2014.09-2017.12</div>
 								<div class="stright lb"><div class="lbd Rtitle animated">Farmhouse</div>
 								<p class="inter"><b>Startup CEO </b><br>•		Demonstrated professional and technical ability, management ability, social communication skills, innovation ability, and strong comprehensive ability.</p>
 							</div>
-								<div class="stleft rb animated">2014.09-2017.12</div>
+								<div class="stleft rb animated" id="laptop2">2014.09-2017.12</div>
 					</div>
 				</section>
 				 </section>
@@ -354,7 +360,19 @@
   
    	<section id="contact">
   		 <h2 class="title">Contact</h2>
-           
+		   <form name="contactform" method="post" action="admin/contact_form.php">
+			  <label for="first_name">First Name *</label>
+			  <input  type="text" name="first_name" id="first_name" maxlength="50" size="30" placeholder="first_name">
+			  <label for="last_name">Last Name *</label>
+			  <input  type="text" name="last_name" id="last_name" maxlength="50" size="30" placeholder="last_name">
+			  <label for="email">Email Address *</label>
+			  <input  type="text" name="email" id="email" maxlength="80" size="30" placeholder="email">
+			  <label for="telephone">Telephone Number</label>
+			  <input  type="text" name="telephone" id="telephone" maxlength="30" size="30" placeholder="phone number">
+			  <label for="comments">Comments *</label>
+			  <textarea  name="comments" id="comments" maxlength="1000" cols="25" rows="6" placeholder="comments(at least teo words)"></textarea>
+			  <input type="submit" value="Submit" class="submit">
+			</form>
 	</section>
 </div>
 

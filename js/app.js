@@ -50,11 +50,10 @@
 			document.querySelector(".para" + i).textContent = obj[i].description;
 			i++;
 		}
-		
 	}
 	
-	education.addEventListener('click', openEducaion);
-	experience.addEventListener('click', openExperience);
+	education.addEventListener('mouseover', openEducaion);
+	experience.addEventListener('mouseover', openExperience);
 	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseover', openanimatate1));
 	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseout', closeanimatate1));
 	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseover', openanimatate2));
