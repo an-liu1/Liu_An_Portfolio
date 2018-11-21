@@ -80,7 +80,29 @@
     cursor: pointer;
     color: red;
 }
+.skill-grids .s1, .skill-grids .s2, .skill-grids .s3, .skill-grids .s4{
+    margin-left: 15%;
+}
 
+#mobile, #mobile1, #mobile2 {
+    display: block;
+    margin-left: 23%;
+    margin-bottom: 5px;
+}
+#laptop, #laptop1, #laptop2 {
+    display: none;
+}
+.la {
+    margin-left: 23%;
+    margin-bottom: 5px;
+}
+// .stleft {
+//     margin-left: 23%;
+//     margin-bottom: 5px;
+// }
+.stright {
+    margin-left: 23%;
+}
 #project {
     clear: both;
     max-width: 75em;
@@ -206,6 +228,22 @@ h3 {
 }
 #contact {
     clear: both;
+    width: 90%;
+    margin: 30px auto;
+}
+.submit{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 40%;
+    padding:5px 10px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: #0AD0C1;
 }
 .backBut {
     position: fixed;
@@ -268,9 +306,23 @@ h3 {
         width: 48%;
         margin-left: 2%;
     }
+    .skill-grids .s1, .skill-grids .s3 {
+        margin-left: 10%;
+        margin-bottom: 3%;
+    }
+    .skill-grids .s2, .skill-grids .s4 {
+        margin-left: 5%;
+        margin-bottom: 3%;
+    }
     .st {
         display: block;
         clear: both;
+    }
+    #mobile, #mobile1, #mobile2 {
+        display: none;
+    }
+    #laptop, #laptop1, #laptop2 {
+        display: block;
     }
     .stleft {
         display: block;
@@ -305,7 +357,13 @@ h3 {
     .inter {
         margin-left: 30%;
     }
-
+    // .stleft {
+    //     margin-left: 0;
+    //     margin-bottom: 0;
+    // }
+    .stright {
+        margin-left: 0;
+    }
     .stright div {
         display: block;
         width: 200px;
@@ -343,7 +401,7 @@ h3 {
     }
     .inner-box .video {
         overflow: hidden;
-        height: 300px;
+        // height: 300px;
     }
     .inner-box .p2 {
         float: right;
@@ -401,6 +459,9 @@ h3 {
         width: 23%;
         margin-bottom: 30px;
         margin-left: 0%;
+    }
+    .skill-grids .s1 {
+        margin-left: 0;
     }
     .skill-grids .s2, .skill-grids .s3, .skill-grids .s4 {
         margin-left: 2.2%;
@@ -464,6 +525,9 @@ h3 {
         margin-left: 10%;
     }
     .wraper {
+        width: 100%;
+    }
+    #contact {
         width: 100%;
     }
     // .p1 {

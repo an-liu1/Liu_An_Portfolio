@@ -65,11 +65,11 @@ h2, h3, h4 {
 #mainNav li a:hover {
     background-color: #f89d9d;
 }
-
 .my_info {
     position: absolute;
     top: 10%;
     right: 1%;
+    display: none;
 }
 .name {
     display: block;
@@ -145,6 +145,7 @@ h2, h3, h4 {
 }
 @media screen and (min-width: 40em) {
     .my_info {
+        display: block;
         position: absolute;
         top: 30%;
         right: 30%;
