@@ -42,3 +42,9 @@ In order to make the project operate well, there is some software necessarily:
 ### License
 
 MIT License
+
+### Future Plan
+
+1. Adding more details about my projects with functions
+2. optimizing structure and functions
+3. more details about myself
