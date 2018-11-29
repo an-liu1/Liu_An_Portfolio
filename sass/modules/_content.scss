@@ -62,26 +62,28 @@
     padding-top: 50px;
     border-bottom: 2px solid #b50611;
     padding-bottom: 50px;
-}
-#info p {
     font-size: $body-font-size;
 }
 .top-links {
     font-size: 0.875em;
 }
-.skill-grids img {
-    width: 45%;
-    margin-left: 3%;
-    margin-bottom: 15px;
-}
+
 .close {
     float: right;
     font-size: 2em;
     cursor: pointer;
     color: red;
 }
-.skill-grids .s1, .skill-grids .s2, .skill-grids .s3, .skill-grids .s4{
-    margin-left: 15%;
+.skill object {
+    width: 100%;
+}
+.skill p {
+    width: 100%;
+    text-indent: 5%;
+    font-size: 1em;
+}
+#experience {
+    padding-top: 20px;
 }
 
 #mobile, #mobile1, #mobile2 {
@@ -115,10 +117,10 @@
 //     margin: 0 auto;
 //     display: block;
 // }
-.p1 img, .p2 img, .p4 img {
+.p1 img, .p2 img, .p4 img, .ads img {
     filter: brightness(40%);
 }
-.p1 img:hover, .p2 img:hover, .p4 img:hover {
+.p1 img:hover, .p2 img:hover, .p4 img:hover, .ads img:hover {
 	-webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
     filter: brightness(100%);
@@ -184,49 +186,60 @@
 #project p {
     font-size: $body-font-size;
 }
-// .controls {
-//   background-color: #000000;
-//   width: 100%;
-//   text-align: center;
-//   height: 50px;
-//   margin-bottom: 20px;
-//   position: relative;
-// }
-// [data-icon]:not([data-icon=pause-circle]):not([data-icon=play-circle]) {
-//   font-size: $body-font-size;
-// }
-// [data-icon] {
-//   font-size: 1.5em;
-//   color: red;
-//   cursor: pointer;
-// }
-// .controls ul {
-//   list-style-type: none;
-//   position: absolute;
-//   top: 20px;
-// }
-// .controls ul li {
-//   display: inline-block;
-//   padding: 0 0.625em;
-// }
-// .controls .progress {
-//     width: 100%;
-//     background-color: #FB0004;
-// }
-// .player__slider {
-//     color: #FB0004;
-//     float: right;
-//     margin-top: -8px;
-//     width: 10%;
-// }
-
+.p1, .p2, .p3, .p4, .ads {
+    margin-bottom: 10px;
+}
+.video1 {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+.controls {
+  display: block;
+  margin: 0 auto;  
+  background-color: #000000;
+  width: 90%;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 20px;
+  position: relative;
+}
+[data-icon]:not([data-icon=pause-circle]):not([data-icon=play-circle]) {
+  font-size: $body-font-size;
+}
+[data-icon] {
+  font-size: 1.5em;
+  color: red;
+  cursor: pointer;
+}
+.controls ul {
+  list-style-type: none;
+  position: absolute;
+  top: 20px;
+  margin-left: 5%;
+}
+.controls ul li {
+  display: inline-block;
+  padding: 0 0.625em;
+}
+.controls .progress {
+    width: 100%;
+    background-color: #FB0004;
+}
+.player__slider {
+    color: #FB0004;
+    float: right;
+    margin-top: -8px;
+    margin-right: 6%;
+    width: 30%;
+}
 h3 {
     font-weight: bold;
     font-size: 1.25em;
     margin-bottom: 5%;
     margin-left: 10px;
 }
-#contact {
+#contactform {
     clear: both;
     width: 90%;
     margin: 30px auto;
@@ -237,13 +250,13 @@ h3 {
     border-radius: 10px;
     width: 40%;
     padding:5px 10px;
-    background-color: lightblue;
+    background-color:#0AD0C1;
     font-weight: bold;
     font-size: 1.2em;
 }
 .submit:hover{
     cursor: pointer;
-    background-color: #0AD0C1;
+    background-color: lightblue;
 }
 .backBut {
     position: fixed;
@@ -260,13 +273,6 @@ h3 {
 
 }
 @media screen and (min-width: 25em) {
-    .player__slider {
-    color: #FB0004;
-    float: right;
-    margin-right: 20%;
-    margin-top: -8px;
-    width: 20%;
-    }
 .left > ul {
     margin-left: 15%;
 }
@@ -306,13 +312,24 @@ h3 {
         width: 48%;
         margin-left: 2%;
     }
-    .skill-grids .s1, .skill-grids .s3 {
-        margin-left: 10%;
-        margin-bottom: 3%;
+    .skill object {
+        width: 50%;
     }
-    .skill-grids .s2, .skill-grids .s4 {
-        margin-left: 5%;
-        margin-bottom: 3%;
+    .skill p {
+        width: 45%;
+        margin-top: 10px;
+    }
+    .l {
+        float: left;
+    }
+    .r {
+        float: right;
+    }
+    .css3, .js, .php {
+        clear: both;
+    }
+    #experience {
+        clear: both;
     }
     .st {
         display: block;
@@ -391,17 +408,16 @@ h3 {
     .p1 {
         float: left;
         width: 24%;
-        height: 512px;
+        height: 500px;
         margin-right: 1%;
     }
     .p3 {
         overflow: hidden;
-        height: 320px;
-        margin-bottom: 1%;
+        height: 250px;
     }
-    .inner-box .video {
+    .inner-box .ads {
         overflow: hidden;
-        // height: 300px;
+        height: 245px;
     }
     .inner-box .p2 {
         float: right;
@@ -418,6 +434,13 @@ h3 {
         width: 96%;
         margin: 0 auto;
     }
+    .controls ul {
+        margin-left: 10%;
+    }
+    .player__slider {
+        width: 50%;
+        margin-right: 10%;
+    }
 }
 @media screen and (min-width: 60em) {
     // #mainHeader {
@@ -433,13 +456,13 @@ h3 {
     .left{
         height: 350px;
         width: 35%;
-        margin-top: 23%;
+        margin-top: 28%;
         margin-left: 14%;
     }
     .right{
         width: 35%;
         height: 350px;
-        margin-top: 23%;
+        margin-top: 28%;
         margin-left: 5%;
     }
     .right iframe {
@@ -451,21 +474,13 @@ h3 {
     #info {
        width: 100%;
     }
+    .skill p {
+        margin-top: 10%;
+    }
     .title {
         margin-left: 0;
         font-size: $title-font-size;
-    }
-    .skill-grids object {
-        width: 23%;
-        margin-bottom: 30px;
-        margin-left: 0%;
-    }
-    .skill-grids .s1 {
-        margin-left: 0;
-    }
-    .skill-grids .s2, .skill-grids .s3, .skill-grids .s4 {
-        margin-left: 2.2%;
-    }
+    } 
     .st {
         display: block;
         clear: both;
@@ -527,24 +542,36 @@ h3 {
     .wraper {
         width: 100%;
     }
-    #contact {
+    .video {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .controls {
+        width: 100%;
+    }
+    #contactform {
         width: 100%;
     }
     // .p1 {
-    //     height: 768px;
+    //     height: 658px;
     // }
-    // .p3 {
-    //     height: 384px;
-    // }
-    // .inner-box .video {
-    //     height: 360px;
-    // }
+    .p3 {
+         height: 324px;
+         margin-bottom: 1%;
+     }
+    .inner-box .ads {
+        height: 345px;
+    }
     // .inner-box .p2 {
     //     height: 640px;
     // }
     // .p4 {
     //     height: 256px;
     // }
+    .player__slider {
+        width: 60%;
+
+    }
     .backBut {
         display: none;
     }
