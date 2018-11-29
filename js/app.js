@@ -4,7 +4,14 @@
 	const education = document.querySelector('.BuED'),
 		  experience = document.querySelector('.BuEX'),
 		  animatation1s = document.querySelectorAll('.stleft'),
-		  animatation2s = document.querySelectorAll('.Rtitle');
+		  animatation2s = document.querySelectorAll('.Rtitle'),
+		  vidPlayer = document.querySelector('.video1'),
+		  playPause = document.querySelector('.play-pause'),
+		  ffWd = document.querySelector('.forward'),
+		  rWnd = document.querySelector('.rewind'),
+		  volume = document.querySelector('.volume'),
+		  fScreen = document.querySelector('.fullScreen'),
+		  ranges = document.querySelector('.player__slider');
 
 
 	function openEducaion() {
@@ -37,28 +44,68 @@
 		this.classList.remove('pulse');
 	}
 
+	function togglePlay() {
+		var theSVG = this.firstElementChild;
+		if(vidPlayer.paused){
+		  vidPlayer.play();
+		  theSVG.dataset.icon = "pause-circle";
+		  }else {
+			  vidPlayer.pause();
+			  theSVG.dataset.icon = "play-circle";
+		  }
+		}
+	function ffWdVid() {
+		vidPlayer.currentTime += 3;
+		}
+		
+		function rWindVid() {
+			vidPlayer.currentTime -= 3;
+		 }
+		
+		 function controlVolume() {
+			 var theIcon = this.firstElementChild;
+			 if (vidPlayer.muted === false) {
+				  vidPlayer.muted = true;
+				  theIcon.dataset.icon = "volume-off";
+			}else {
+				  vidPlayer.muted = false;
+				theIcon.dataset.icon = "volume-up";
+			}
+		  }
+		
+		function handleRangeUpdate() {
+			vidPlayer[this.name] = this.value;
+		}
+		function fScreenF() {
+			fullscreen(vidPlayer);
+		}
+		function fullscreen(element) {
+			if(element.requestFullscreen) {
+			  element.requestFullscreen();
+			} else if(element.mozRequestFullScreen) {
+			  element.mozRequestFullScreen();
+			} else if(element.webkitRequestFullscreen) {
+			  element.webkitRequestFullscreen();
+			} else if(element.msRequestFullscreen) {
+			  element.msRequestFullscreen();
+			}
+		  }
+
 	function loadDoc(data) {
-		var arr = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]]
+		var arr = [data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], data[8]]
         var obj = {}
         for(var title in arr){
             obj[title]=arr[title]
 		}
 		console.log(obj);
 		var i;
-		for(i=0;i<=7;){
+		for(i=0;i<=8;){
 			document.querySelector(".img" + i).src = `images/${obj[i].photo}`;
 			document.querySelector(".para" + i).textContent = obj[i].description;
 			i++;
 		}
 	}
-	
-	education.addEventListener('mouseover', openEducaion);
-	experience.addEventListener('mouseover', openExperience);
-	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseover', openanimatate1));
-	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseout', closeanimatate1));
-	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseover', openanimatate2));
-	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseout', closeanimatate2));
-	
+
 	function getData(){
 		fetch('./admin/config.php')
 		.then(res => res.json())
@@ -71,4 +118,19 @@
 		});
 	}
 	getData();
+	
+	education.addEventListener('mouseover', openEducaion);
+	experience.addEventListener('mouseover', openExperience);
+	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseover', openanimatate1));
+	animatation1s.forEach(animatation1 => animatation1.addEventListener('mouseout', closeanimatate1));
+	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseover', openanimatate2));
+	animatation2s.forEach(animatation2 => animatation2.addEventListener('mouseout', closeanimatate2));
+	playPause.addEventListener('click', togglePlay);
+  	ffWd.addEventListener('click', ffWdVid);
+  	rWnd.addEventListener('click', rWindVid);
+	volume.addEventListener('click', controlVolume);
+	ranges.addEventListener('change', handleRangeUpdate);
+	ranges.addEventListener('mousemove', handleRangeUpdate);
+	fScreen.addEventListener('click', fScreenF);
+	
 })();

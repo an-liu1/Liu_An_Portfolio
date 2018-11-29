@@ -16,7 +16,7 @@
    	<header id="mainHeader">
       <div data-sticky-container class="optopp">
   <div class="title-bar" data-sticky data-options="marginTop:0;">
-    <div class="title-bar-left"><p>Liu An Portfolio</p></div>
+    <div class="title-bar-left"><p>Liu An <span style="color:#dc0a18;font-size: 1.25em;">Portfolio</span></p></div>
     <div class="title-bar-right">
       <nav class="small-12 columns mainNav">
       <h2 class="hide">Main Navigation</h2>
@@ -29,7 +29,7 @@
           <ul id="mainNav">
             <li><a class="page-scroll" href="#mainHeader">HOME</a></li>
             <li><a class="page-scroll" href="#aboutme">ABOUT ME</a></li>
-            <li><a class="page-scroll" href="#experience">EXPERIENCE</a></li>
+            <li><a class="page-scroll" href="#experience">RESUME</a></li>
             <li><a class="page-scroll" href="#project">PROJECTS</a></li>
             <li><a class="page-scroll" href="#contact">CONTACT</a></li>
           </ul>
@@ -64,7 +64,7 @@
       <a href="#" id="backBut"><img src="images/move-top.png" alt="backtop"></a>
 	</div>
 	
-  	<section id="aboutme">
+  	<section>
 		<div class="left">
 				<a data-open="portrait"><img src="images/portrait.jpg" alt="image" width="150" height="150" class ="portrait1"></a>
 				<div class="medium reveal" id="portrait" data-reveal>
@@ -96,57 +96,30 @@
 					<p class="na">I am An Liu (Andy). I graduated from Jiangxi Agriculture University majoring in Software Engineering, and I am currently studying at Fanshawe College in the program of Interactive Media Design. I believe that the skills I have acquired in school and the experience I have gained in my life make me an ideal candidate for the job in your company. I believe my interpersonal skills, quick learning ability, and working experience can contribute to your team.</p>
 				</div>
 					<h2 class="title">My Skills</h2>
-					<div class="skill-grids">
-						<object data="images/s1.svg" type="image/svg+xml" class="s1"></object>
-						<object data="images/s2.svg" type="image/svg+xml" class="s2"></object>
-						<object data="images/s3.svg" type="image/svg+xml" class="s3"></object>
-						<object data="images/s4.svg" type="image/svg+xml" class="s4"></object>
-				</div>		
-				<div class="html5">
-					<p style="font-weight:bold;">HTML 5</p>
-				<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-					<div class="progress-meter" style="width: 85%">
-					  <p class="progress-meter-text">85%</p>
-					</div>
-				  </div>
-				</div>
-				<div class="css3">
-						<p style="font-weight:bold;">CSS 3</p>
-					<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-							<div class="warning progress">
-						<div class="progress-meter" style="width: 80%">
-						  <p class="progress-meter-text">80%</p>
+					<div class="skill">
+						<div class="html5">
+							<object data="images/s1.svg" type="image/svg+xml" class="s1 l"></object>
+							<p class="r">HTML 5 (formerly spelled HTML5) is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current major version of the HTML standard, and subsumes XHTML.</p>
 						</div>
+						<div class="css3">
+							<object data="images/s2.svg" type="image/svg+xml" class="s2 r"></object>
+							<p class="l">CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
 						</div>
-					  </div>
-					</div>
-					<div class="js">
-							<p style="font-weight:bold;">JavaScript</p>
-						<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-								<div class="success progress">
-									<div class="progress-meter" style="width: 60%">
-							  <p class="progress-meter-text">60%</p>
-									</div>
-								</div>
-						  </div>
+						<div class="js">
+							<object data="images/s3.svg" type="image/svg+xml" class="s3 l"></object>
+							<p class="r">JavaScript often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.</p>
 						</div>
 						<div class="php">
-								<p style="font-weight:bold;">PHP</p>
-							<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
-									<div class="alert progress">
-										<div class="progress-meter" style="width: 70%">
-								  <p class="progress-meter-text">70%</p>
-										</div>
-									</div>
-							  </div>
-							</div>
-
+							<object data="images/s4.svg" type="image/svg+xml" class="s4 r"></object>
+							<p class="l">PHP (Hypertext Preprocessor) is a server-side scripting language designed for Web development, and also used as a general-purpose programming language. It was originally created by Rasmus Lerdorf in 1994.</p>
+						</div>
+				</div>		
 			</div>
 			<section id="experience">
-					<h2 class="title">Education & Experience</h2>
+					<h2 class="title">Resume</h2>
 					<div class="Sbutton">
-						<a class="button success BuED animated slow">Education</a>
-						<a class="button alert BuEX animated slow">Experience</a>
+						<a class="hollow button alert BuED animated slow">Education</a>
+						<a class="hollow button alert BuEX animated slow">Experience</a>
 					</div>
 					<section class="education">
 						<h3>EDUCATION</h3>
@@ -226,7 +199,7 @@
 		   <h2 class="title">Projects</h2>
 			<div class="wraper">
 		   <div class="p1">
-			  <a data-open="photo1"><img src="images/p1.png" alt="image"></a>
+			  <a data-open="photo1"><picture><source srcset="images/p1_mobile.png" media="(max-width: 735px)"><img src="images/p1.png" alt="image"></picture></a>
 			  <div class="medium reveal" id="photo1" data-reveal>
 			  <button class="close-button" data-close aria-label="Close Reveal" type="button">
 			  <span >&times;</span>
@@ -311,7 +284,7 @@
 			
 			<div class="inner-box"> 
 			<div class="p2">
-					<a data-open="photo2"><img src="images/p2.png" alt="image"></a>
+					<a data-open="photo2"><picture><source srcset="images/p2_mobile.png" media="(max-width: 735px)"><img src="images/p2.png" alt="image"></picture></a>
 					<div class="medium reveal" id="photo2" data-reveal>
 					<button class="close-button" data-close aria-label="Close Reveal" type="button">
 					<span >&times;</span>
@@ -322,26 +295,16 @@
 					</div>
 				</div>
 				<div class="ads">
-				<div class="video">
-			<video poster="images/slide2.png" class="video" controls>
-				<source src="video/teaser_trailer.mp4" type="video/mp4">
-				<source src="video/teaser_trailer.mov" type="video/mov">
-			</video>
-			<!-- <div class="controls">
-				<div class="progress">
-				<div class="progress__filled"></div>
-				</div>
-				<ul>
-				  <li class="rewind"><i class="fas fa-backward"></i></li>
-				  <li class="play-pause"><i class="fas fa-play-circle"></i></li>
-				  <li class="forward"><i class="fas fa-forward"></i></li>
-				  <li class="fullScreen"><i class="fas fa-arrows-alt"></i></li>
-				  <li class="volume"><i class="fas fa-volume-up"></i></li> 
-				</ul>
-				<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
-			 </div> -->
+						<a data-open="photo3"><picture><source srcset="images/p5_mobile.png" media="(max-width: 735px)"><img src="images/p5.png" alt="image"></picture></a>
+						<div class="medium reveal" id="photo3" data-reveal>
+						<button class="close-button" data-close aria-label="Close Reveal" type="button">
+						<span >&times;</span>
+						</button>
+						<p  style="text-indent: 30px;  font-size: 1.3em;" class="para8"></p>
+						<hr style="border:0;background-color:#ff0000;height:1px;">
+						<img class="img8 portrait1" alt="image">
+						</div>
 			</div>
-		</div>
 					<div class="p4">
 							<a data-open="photo4"><img src="images/p4.png" alt="image"></a>
 							<div class="medium reveal" id="photo4" data-reveal>
@@ -356,11 +319,30 @@
 				</div>
 				</div>
    	</section>
-
+	<section class="video">
+		<h2 class="title">Video</h2>
+		<video poster="images/slide2.png" class="video video1">
+			<source src="video/teaser_trailer.mp4" type="video/mp4">
+			<source src="video/teaser_trailer.mov" type="video/mov">
+		</video>
+		<div class="controls">
+			<div class="progress">
+			<div class="progress__filled"></div>
+			</div>
+			<ul>
+			  <li class="rewind"><i class="fas fa-backward"></i></li>
+			  <li class="play-pause"><i class="fas fa-play-circle"></i></li>
+			  <li class="forward"><i class="fas fa-forward"></i></li>
+			  <li class="fullScreen"><i class="fas fa-arrows-alt"></i></li>
+			  <li class="volume"><i class="fas fa-volume-up"></i></li> 
+			</ul>
+			<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+		 </div>
+	</section>
   
    	<section id="contact">
   		 <h2 class="title">Contact</h2>
-		   <form name="contactform" method="post" action="admin/contact_form.php">
+		   <form name="contactform" method="post" action="admin/contact_form.php" id="contactform">
 			  <label for="first_name">First Name *</label>
 			  <input  type="text" name="first_name" id="first_name" maxlength="50" size="30" placeholder="first_name">
 			  <label for="last_name">Last Name *</label>

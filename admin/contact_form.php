@@ -1,39 +1,22 @@
-<style>
-.wrong, .success {
-    margin: 30px auto;
-    width: 50%;
-    text-align: center;
-    font-size: 1.5em;
-}
-.button{
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    width: 15%;
-    padding:5px 10px;
-    background-color: lightblue;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-align: center; 
-}
-.button a {
-  text-decoration: none;
-}
-.button:hover {
-    cursor: pointer;
-    background-color: #0AD0C1;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/contact_form.css">
+  <title>Contact Me</title>
+</head>
+<body>
 <?php
 if(isset($_POST['email'])) {
  
-    // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "andyvviiar@gmail.com";
     $email_subject = "Someone contatct you!";
  
     function died($error) {
         
-        // your error code can go here
+        // error code
         echo "<div class=\"wrong\">We are very sorry, but there were error(s) found with the form you submitted. These errors appear below.<br /></div>";
         echo "<div class=\"wrong\">".$error."</div>";
         echo "<div class=\"wrong\">Please go back and fix these errors.</div>";
@@ -100,7 +83,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
  
-// create email headers
+// email headers
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
@@ -109,8 +92,6 @@ $headers = 'From: '.$email_from."\r\n".
 
 ?>
  
-<!-- include your own success html here -->
- 
 <div class="success">Thank you for contacting me. I will be in touch with you very soon.</div><br>
 <div class="button"><a href="../index.html#contact">Go Back</a></div>
  
@@ -118,3 +99,5 @@ $headers = 'From: '.$email_from."\r\n".
 <?php
 }
 ?>
+</body>
+</html>
