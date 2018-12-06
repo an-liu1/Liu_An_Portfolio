@@ -1,6 +1,6 @@
 .left{
     display: block;
-    height: 350px;
+    height: 100%;
     width: 90%;
     background-color:black;
     margin: 10px auto;
@@ -121,6 +121,7 @@
     filter: brightness(40%);
 }
 .p1 img:hover, .p2 img:hover, .p4 img:hover, .ads img:hover {
+    transition: all 2s;
 	-webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
     filter: brightness(100%);
