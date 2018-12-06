@@ -11,7 +11,7 @@
 <?php
 if(isset($_POST['email'])) {
  
-    $email_to = "andyvviiar@gmail.com";
+    $email_to = "andyvviiar@andyliu.cloud";
     $email_subject = "Someone contatct you!";
  
     function died($error) {
