@@ -1,376 +1,93 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liu_An_Portfolio</title>
-    <link rel="stylesheet" href="css/foundation.css">
-	<link rel="stylesheet" href="css/main.css">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta name="renderer" content="webkit">
+	<title>Liu_An_Portfolio</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-  </head>
-  <body data-mce-style="color: #0000ff;">
-	<h1 class="hide">Liu An Portfolio</h1>
-	<div class="preloader"></div>
-   	<header id="mainHeader">
-      <div data-sticky-container class="optopp">
-  <div class="title-bar" data-sticky data-options="marginTop:0;">
-    <div class="title-bar-left"><p>Liu An <span style="color:#dc0a18;font-size: 1.25em;">Portfolio</span></p></div>
-    <div class="title-bar-right">
-      <nav class="small-12 columns mainNav">
-      <h2 class="hide">Main Navigation</h2>
-      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-        <div class="title-bar-right">
-          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-        </div>
-        </div>
-        <div id="main-menu">
-          <ul id="mainNav">
-            <li><a class="page-scroll" href="#mainHeader">HOME</a></li>
-            <li><a class="page-scroll" href="#info">ABOUT ME</a></li>
-            <li><a class="page-scroll" href="#experience">RESUME</a></li>
-            <li><a class="page-scroll" href="#project">PROJECTS</a></li>
-            <li><a class="page-scroll" href="#contact">CONTACT</a></li>
-          </ul>
-        </div>
-    </nav>
-  </div>
-  </div>
-</div>
-   		<div id="banner">
-			<picture>
-			<source srcset="images/banner_mobile.png" media="(max-width: 640px)">
-			   <img src="images/banner.png" alt="banner" class="banner">
-			</picture>
+	<style type="text/css">
+		body{color:#222;-webkit-text-size-adjust:none;}
+		body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{margin:0; padding:0;}
+		h1,h2,h3,h4,h5,h6{font-size:100%;}
+		body,button,input,select,textarea {font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;font-size:62.5%; line-height:1.5;}
+		ol,ul{list-style:none;}
+		
+		html,body{ width:100%; height:100%; overflow:hidden;}
+		.section-wrap{ width:100%;height:100%;overflow:visible;transition:transform 1s cubic-bezier(0.86,0,0.03,1);-webkit-transition:-webkit-transform 1s cubic-bezier(0.86,0,0.03,1);}
+		.section-wrap .section{ position:relative; width:100%; height:100%; background-position:center center; background-repeat:no-repeat;}
+		.section-wrap .section .title{width:100%;position:absolute;top:10%;color:#fff;font-size:2.4em;text-align:center;}
+		.section-wrap .section .title h1{ padding:0 4%;opacity:0}
+		.section-wrap .section .title.active .tit{opacity:1;transform:translateY(-25px);-webkit-transform:translateY(-25px);transition:all 2s cubic-bezier(0.86,0,0.8,1);-webkit-transition:all 2s cubic-bezier(0.86,0,0.8,1);}
+		.section-wrap .section-1{ background-image: url("images/code1.png")}
+
+		.put-section-0{ transform:translateY(0);-webkit-transform:translateY(0);}
+		.put-section-1{ transform:translateY(-100%);-webkit-transform:translateY(-100%);}
+
+		.section-btn{ width:14px;position:fixed;right:4%;top:50%;}
+		.section-btn li{ width:14px;height:14px;cursor:pointer;text-indent:-9999px;border-radius:50%;-webkit-border-radius:50%;margin-bottom:12px; background:#BD362F;text-align:center; color:#fff; onsor:pointer;}
+		.section-btn li.on{ background:#fff}
+		.arrow{ opacity:1;animation:arrow 3s cubic-bezier(0.5,0,0.1,1) infinite;-webkit-animation:arrow 3s cubic-bezier(0.5,0,0.1,1) infinite;transform:rotate(-90deg);-webkit-transform:rotate(-90deg); position:absolute;bottom:10px;left:50%;margin-left:-30px;width:60px;height:60px;border-radius:100%;-webkit-border-radius:100%;line-height:60px;text-align:center;font-size:20px;color:#fff;border:1px solid #fff;cursor:pointer;overflow:hidden;}
+		.arrow:hover{ animation-play-state:paused;-webkit-animation-play-state:paused;}
+		@keyframes arrow{ %0,%100{bottom:10px; opacity:1;} 50%{bottom:50px; opacity:.5}}
+		@-webkit-keyframes arrow{ %0,%100{bottom:10px; opacity:1;} 50%{bottom:50px; opacity:.5} }
+
+		.span{
+			color: red;
+			font-size: 1.5em;
+		}
+		.to{
+			width: 50%;margin: 30% auto;
+		}
+		@media screen and (min-width: 47.25em){
+		.section-wrap .section .title.active .tit{font-size:3em;}
+		.span{
+			color:red;font-size: 1.3em;
+		}
+		.to{
+			font-size:2em;width: 50%;margin: 25% auto;
+		}
+		.will{
+			margin:5% 0 0 30%;font-size: 1.4em;
+		}
+		}
+		@media screen and (min-width: 58.25em){
+		.section-wrap .section .title.active .tit{font-size:3.5em;}
+		.span{
+			color:red;font-size: 1.5em;
+		}
+		.to{
+			font-size:3em;width: 30%;margin: 50px auto;
+		}
+		.will{
+			margin:3% 0 0 30%;font-size: 1.4em;
+		}
+		}
+	</style>
+</head>
+<body>
+	<section class="section-wrap">
+		<div class="section section-1">
+			<div class="title active">
+				<h1 class="tit animated infinite pulse delay-2s">Liu An <span class="span">Portfolio</span></h1>
+
+				<p class="to">To be, or not to be, That is the Question!</p>
+				<p class="will">--- WILLIAM SHAKESPEARE</p>
+			</div>
 		</div>
-		<div class="my_info">
-		<div class="name" >	
-			<p class="my_name">An Liu</p>
-			<p> Web Designer & Developer</p>
-		</div>
-		<div class="social-icons">
-			<ul class="top-links">
-				<li><a href="http://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
-				<li><a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="http://www.linkin.com"><i class="fab fa-linkedin"></i></a></li>
-				<li><a href="http://www.google.com"><i class="fab fa-google-plus"></i></a></li>
-			</ul>
-		</div>
-	</div>
-   	</header>
-
-    <div class="backBut">
-      <a href="#" id="backBut"><img src="images/move-top.png" alt="backtop"></a>
-	</div>
-	
-  	<section>
-		<div class="left">
-				<a data-open="portrait"><img src="images/portrait.jpg" alt="image" width="150" height="150" class ="portrait1"></a>
-				<div class="large reveal" id="portrait" data-reveal>
-				<button class="close-button" data-close aria-label="Close Reveal" type="button">
-				<span >&times;</span>
-				</button>
-				<img class="img0 portrait1" alt="images">
-				<hr style="border:0;background-color:#ff0000;height:1px;">
-				<p  style="text-indent: 30px; font-size: 1.3em;" class="para0"></p>
-				</div>
-				<hr style="border:0;background-color:#ff0000;height:1px;">
-				<ul class="address">
-						 <li><b>NAME :</b> An Liu</li>
-						<li><b>D.O.B :</b> 08-01-1994</li>
-						<li><b>ADDRESS :</b> 40 Summit Ave,London,ON.</li>
-						<li><b>E-MAIL :</b> andyvviiar@gmail.com</li>
-				</ul>
-			</div>
-			<div class="right">
-				<h2>My Program</h2>
-				<iframe src="https://www.youtube.com/embed/HMGYqL_j4v8" allowfullscreen></iframe>
-			</div>
 	</section>
-		  
-	<div id="contentWidth">
-			<h2 class="title Sp-title">About Me</h2>
-			<div id="info">
-				<div>
-					<p class="na">I am An Liu (Andy). I graduated from Jiangxi Agriculture University majoring in Software Engineering, and I am currently studying at Fanshawe College in the program of Interactive Media Design. I believe that the skills I have acquired in school and the experience I have gained in my life make me an ideal candidate for the job in your company. I believe my interpersonal skills, quick learning ability, and working experience can contribute to your team.</p>
-				</div>
-					<h2 class="title">My Skills</h2>
-					<div class="skill">
-						<div class="html5">
-							<object data="images/s1.svg" type="image/svg+xml" class="s1 l"></object>
-							<p class="r">HTML 5 (formerly spelled HTML5) is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current major version of the HTML standard, and subsumes XHTML.</p>
-						</div>
-						<div class="css3">
-							<object data="images/s2.svg" type="image/svg+xml" class="s2 r"></object>
-							<p class="l">CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-						</div>
-						<div class="js">
-							<object data="images/s3.svg" type="image/svg+xml" class="s3 l"></object>
-							<p class="r">JavaScript often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.</p>
-						</div>
-						<div class="php">
-							<object data="images/s4.svg" type="image/svg+xml" class="s4 r"></object>
-							<p class="l">PHP (Hypertext Preprocessor) is a server-side scripting language designed for Web development, and also used as a general-purpose programming language. It was originally created by Rasmus Lerdorf in 1994.</p>
-						</div>
-				</div>		
-			</div>
-			<section id="experience">
-					<h2 class="title">Resume</h2>
-					<p class="title" style="font-size:1.25em; margin-top: -20px;"><a href="assets/An Liu_Resume.pdf">Click --->> Download Resume</a></p>
-					<div class="Sbutton">
-						<a class="hollow button alert BuED animated slow">Education</a>
-						<a class="hollow button alert BuEX animated slow">Experience</a>
-					</div>
-					<section class="education">
-						<h3>EDUCATION</h3>
-					<div class="st">
-						<div class="stleft la animated">2017.09-2019.04</div>
-						<div class="stright ra"><div class="Rtitle animated">Fanshawe College</div>
-						<p><b>Interactive Media Design</b><br>
-							GPA: 3.70/4.30<br>
-							Related Courses:<br>
-							• Design & Image  
-							• Digital Media Theory & Project Management<br>
-							• Web development  
-							• Multimedia Production<br>
-							• Multimedia Authoring  
-							• Motion Design</p>
-					</div>
-				</div>
-					<div class="st1">
-							<div class="stleft animated" id="mobile">2016.09-2016.12</div>
-							<div class="stright lb"><div class="lbd Rtitle animated">Trinity Western University</div>
-							<p class="inter"><b>Master of Business Administration </b><br>One-year MBA program starts in March and is designed for high-achieving leaders who are ready to accelerate their career success. Join one of the top MBA programs in Canada today. Completed one semester study in management</p>
-						</div>
-							<div class="stleft rb animated" id="laptop">2016.09-2016.12</div>
-					</div>
-					<div class="st">
-							<div class="stleft la animated">2012.09-2016.06</div>
-							<div class="stright ra"><div class="Rtitle animated">JiangXi Agriculture University</div>
-							<p><b>Software Engineering</b><br>• CGPA: 3.50/4.30<br>
-								Related Courses:<br>
-								• Web development technology (Java or .net)
-								• Visual modeling and UML<br>
-								• Web development foundation 
-								• JAVA program design<br>
-								• Large database technology (oracle) 
-								• Database principles and application 
-								</p>
-						</div>
-					</div>
-				</section>
 
-					<section class="experience">
-						<h3>EXPERIENCE</h3>
-					<div class="st">
-						<div class="stleft la animated">2018.01-2019.04</div>
-						<div class="stright ra"><div class="Rtitle animated">Fanshawe Chinese Society</div>
-						<p><b>President</b><br>•	To serve students and bring benefits to them. For example; let students get to know each other and integrate into Canadian life as soon as possible.
-							<br>•	To help students in our club to improve themselves, like social skills, confidence, etc.</p>
-					</div>
-					</div>
-					<div class="st1">
-							<div class="stleft animated" id="mobile1">2014.11</div>
-							<div class="stright lb"><div class="lbd Rtitle animated">JiangXi Agriculture University</div>
-							<p class="inter"><b>International Volunteer </b><br>The 3rd World Conference on Low-carbon Economy and the 7th China Green Food Expo<br>  
-								•	Provided excellent service to guests in attendance and was responsible for helping to organize the guest reception ceremony.</p>
-						</div>
-							<div class="stleft rb animated" id="laptop1">2014.11</div>
-					</div>
-					<div class="st">
-							<div class="stleft la animated">2015.12-2016.04</div>
-							<div class="stright ra"><div class="Rtitle animated">Global Education & Technology Co., Ltd.</div>
-							<p><b>Teaching Assistant</b><br>•	Demonstrated ability to coordinate with professors based on the course schedule<br>
-								•	Gained experience of marking students’ assignments accurately with strong work ethic</p>
-						</div>
-					</div>
-						<div class="st1">
-								<div class="stleft animated" id="mobile2">2014.09-2017.12</div>
-								<div class="stright lb"><div class="lbd Rtitle animated">Farmhouse</div>
-								<p class="inter"><b>Startup CEO </b><br>•		Demonstrated professional and technical ability, management ability, social communication skills, innovation ability, and strong comprehensive ability.</p>
-							</div>
-								<div class="stleft rb animated" id="laptop2">2014.09-2017.12</div>
-					</div>
-				</section>
-				 </section>
+	<div class="arrow" onclick="tz()">&laquo;</div>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+	function tz(){
+ 
+ window.location.href='portfolio.html';
+}
 
-   	<section id="project">
-		   <h2 class="title">Projects</h2>
-			<div class="wraper">
-		   <div class="p1">
-			  <a data-open="photo1"><picture><source srcset="images/p1_mobile.png" media="(max-width: 735px)"><img src="images/p1.png" alt="image"></picture></a>
-			  <div class="large reveal" id="photo1" data-reveal>
-			  <button class="close-button" data-close aria-label="Close Reveal" type="button">
-			  <span >&times;</span>
-				</button>
-				<p class="para1" style="text-indent: 30px; font-size: 1.3em;"></p>
-				<hr style="border:0;background-color:#ff0000;height:1px;">
-			  <img class="img1 portrait1" alt="image">
-			  </div>
-		  </div>
-		  <div class="p3">
-					<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-							<div class="orbit-wrapper">
-								<div class="orbit-controls">
-									<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-									<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-								</div>
-								<ul class="orbit-container">
-									<li class="is-active orbit-slide">
-										<figure class="orbit-figure">
-												<figure data-open="photo5"><img class="orbit-image" src="images/slide1.png" alt="Space">
-													<figcaption class="orbit-caption">Agency X--- A site to introduce our team ------- <a style="color:#fff;" href="https://github.com/an-liu1/A2_Week4">https://github.com/an-liu1/A2_Week4</a></figcaption>
-												</figure>
-												<div class="large reveal" id="photo5" data-reveal>
-												<button class="close-button" data-close aria-label="Close Reveal" type="button">
-												<span >&times;</span>
-												</button>
-												<img class="img2 portrait1" alt="image">
-												<hr style="border:0;background-color:#ff0000;height:1px;">
-												<p style="text-indent:30px; font-size: 1.3em;" class="para2"></p>
-												</div>
-										</figure>
-									</li>
-									<li class="orbit-slide">
-										<figure class="orbit-figure">
-												<figure data-open="photo6"><img class="orbit-image" src="images/slide2.png" alt="Space">
-													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ <a style="color:#fff;" href="https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic">https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</a></figcaption>
-												</figure>
-												<div class="large reveal" id="photo6" data-reveal>
-												<button class="close-button" data-close aria-label="Close Reveal" type="button">
-												<span >&times;</span>
-												</button>
-												<img class="img3 portrait1" alt="image">
-												<hr style="border:0;background-color:#ff0000;height:1px;">
-												<p style="text-indent:30px; font-size: 1.3em;" class="para3"></p>
-												</div>
-										</figure>
-									</li>
-									<li class="orbit-slide">
-										<figure class="orbit-figure">
-												<figure data-open="photo7"><img class="orbit-image" src="images/slide3.png" alt="Space">
-													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ <a style="color:#fff;"href="https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic">https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</a></figcaption>
-												</figure>
-												<div class="large reveal" id="photo7" data-reveal>
-												<button class="close-button" data-close aria-label="Close Reveal" type="button">
-												<span >&times;</span>
-												</button>
-												<img class="img4 portrait1" alt="image">
-												<hr style="border:0;background-color:#ff0000;height:1px;">
-												<p style="text-indent:30px; font-size: 1.3em;" class="para4"></p>
-												</div>
-										</figure>
-									</li>
-									<li class="orbit-slide">
-											<figure class="orbit-figure">
-													<figure data-open="photo8"><img class="orbit-image" src="images/slide4.png" alt="Space">
-														<figcaption class="orbit-caption">WorldPress Project --- Being familiar with worldpres website building</figcaption>
-													</figure>
-													<div class="large reveal" id="photo8" data-reveal>
-													<button class="close-button" data-close aria-label="Close Reveal" type="button">
-													<span >&times;</span>
-													</button>
-													<img class="img5 portrait1" alt="image">
-													<hr style="border:0;background-color:#ff0000;height:1px;">
-													<p style="text-indent:30px; font-size: 1.3em;" class="para5"></p>
-													</div>
-											</figure>
-										</li>
-								</ul>
-							</div>
-						</div>
-			</div>	
-			
-			<div class="inner-box"> 
-			<div class="p2">
-					<a data-open="photo2"><picture><source srcset="images/p2_mobile.png" media="(max-width: 735px)"><img src="images/p2.png" alt="image"></picture></a>
-					<div class="large reveal" id="photo2" data-reveal>
-					<button class="close-button" data-close aria-label="Close Reveal" type="button">
-					<span >&times;</span>
-					</button>
-					<p  style="text-indent: 30px;  font-size: 1.3em;" class="para6"></p>
-					<hr style="border:0;background-color:#ff0000;height:1px;">
-					<img class="img6 portrait1" alt="image">
-					</div>
-				</div>
-				<div class="ads">
-						<a data-open="photo3"><picture><source srcset="images/p5_mobile.png" media="(max-width: 735px)"><img src="images/p5.png" alt="image"></picture></a>
-						<div class="large reveal" id="photo3" data-reveal>
-						<button class="close-button" data-close aria-label="Close Reveal" type="button">
-						<span >&times;</span>
-						</button>
-						<p  style="text-indent: 30px;  font-size: 1.3em;" class="para8"></p>
-						<hr style="border:0;background-color:#ff0000;height:1px;">
-						<img class="img8 portrait1" alt="image">
-						</div>
-			</div>
-					<div class="p4">
-							<a data-open="photo4"><img src="images/p4.png" alt="image"></a>
-							<div class="large reveal" id="photo4" data-reveal>
-							<button class="close-button" data-close aria-label="Close Reveal" type="button">
-							<span >&times;</span>
-							</button>
-							<p  style="text-indent: 30px; font-size: 1.3em;" class="para7"></p>
-							<hr style="border:0;background-color:#ff0000;height:1px;">
-							<img class="img7 portrait1" alt="image">
-							</div>
-						</div>
-				</div>
-				</div>
-   	</section>
-	<section class="video">
-		<h2 class="title">Video</h2>
-		<video poster="images/video_banner.png" class="video video1">
-			<source src="video/An_Liu_Portfolio.mp4" type="video/mp4">
-			<source src="video/An_Liu_Portfolio.webm" type="video/webm">
-			<source src="video/An_Liu_Portfolio.Ogg" type="video/ogg">
-		</video>
-		<div class="controls">
-			<div class="progress">
-			<div class="progress__filled"></div>
-			</div>
-			<ul>
-			  <li class="rewind"><i class="fas fa-backward"></i></li>
-			  <li class="play-pause"><i class="fas fa-play-circle"></i></li>
-			  <li class="forward"><i class="fas fa-forward"></i></li>
-			  <li class="fullScreen"><i class="fas fa-arrows-alt"></i></li>
-			  <li class="volume"><i class="fas fa-volume-up"></i></li> 
-			</ul>
-			<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
-		 </div>
-	</section>
-  
-   	<section id="contact">
-  		 <h2 class="title">Contact</h2>
-		   <form name="contactform" method="post" action="admin/contact_form.php" id="contactform">
-			  <label for="first_name">First Name *</label>
-			  <input  type="text" name="first_name" id="first_name" maxlength="50" size="30" placeholder="first_name">
-			  <label for="last_name">Last Name *</label>
-			  <input  type="text" name="last_name" id="last_name" maxlength="50" size="30" placeholder="last_name">
-			  <label for="email">Email Address *</label>
-			  <input  type="text" name="email" id="email" maxlength="80" size="30" placeholder="email">
-			  <label for="telephone">Telephone Number</label>
-			  <input  type="text" name="telephone" id="telephone" maxlength="30" size="30" placeholder="phone number">
-			  <label for="comments">Comments *</label>
-			  <textarea  name="comments" id="comments" maxlength="1000" cols="25" rows="6" placeholder="comments(at least teo words)"></textarea>
-			  <input type="submit" value="Submit" class="submit">
-			</form>
-	</section>
-</div>
+</script>
 
-    <footer id="footerCon">
-		<h2 class="hide">mainFooter</h2>
-        <div class="cpy-right">
-            <p>© 2018 An Liu Resume. All rights reserved | Design by An.</p>
-    	</div>
-    </footer>
-
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+</body>
 </html>

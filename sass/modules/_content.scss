@@ -117,10 +117,13 @@
 //     margin: 0 auto;
 //     display: block;
 // }
-.p1 img, .p2 img, .p4 img, .ads img {
-    filter: brightness(40%);
+.p7, .p8,.p9,.p10{
+    margin-bottom: 10px;
 }
-.p1 img:hover, .p2 img:hover, .p4 img:hover, .ads img:hover {
+.p1 img, .p2 img, .p4 img, .ads img, .p7 img, .p8 img, .p9 img, .p10 img {
+    filter: brightness(40%); 
+}
+.p1 img:hover, .p2 img:hover, .p4 img:hover, .ads img:hover, .p7 img:hover, .p8 img:hover, .p9 img:hover, .p10 img:hover {
     transition: all 2s;
 	-webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
