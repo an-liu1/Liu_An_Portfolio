@@ -1,93 +1,658 @@
 <!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-	<meta name="renderer" content="webkit">
-	<title>Liu_An_Portfolio</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<style type="text/css">
-		body{color:#222;-webkit-text-size-adjust:none;}
-		body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl, dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{margin:0; padding:0;}
-		h1,h2,h3,h4,h5,h6{font-size:100%;}
-		body,button,input,select,textarea {font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;font-size:62.5%; line-height:1.5;}
-		ol,ul{list-style:none;}
-		
-		html,body{ width:100%; height:100%; overflow:hidden;}
-		.section-wrap{ width:100%;height:100%;overflow:visible;transition:transform 1s cubic-bezier(0.86,0,0.03,1);-webkit-transition:-webkit-transform 1s cubic-bezier(0.86,0,0.03,1);}
-		.section-wrap .section{ position:relative; width:100%; height:100%; background-position:center center; background-repeat:no-repeat;}
-		.section-wrap .section .title{width:100%;position:absolute;top:10%;color:#fff;font-size:2.4em;text-align:center;}
-		.section-wrap .section .title h1{ padding:0 4%;opacity:0}
-		.section-wrap .section .title.active .tit{opacity:1;transform:translateY(-25px);-webkit-transform:translateY(-25px);transition:all 2s cubic-bezier(0.86,0,0.8,1);-webkit-transition:all 2s cubic-bezier(0.86,0,0.8,1);}
-		.section-wrap .section-1{ background-image: url("images/code1.png")}
-
-		.put-section-0{ transform:translateY(0);-webkit-transform:translateY(0);}
-		.put-section-1{ transform:translateY(-100%);-webkit-transform:translateY(-100%);}
-
-		.section-btn{ width:14px;position:fixed;right:4%;top:50%;}
-		.section-btn li{ width:14px;height:14px;cursor:pointer;text-indent:-9999px;border-radius:50%;-webkit-border-radius:50%;margin-bottom:12px; background:#BD362F;text-align:center; color:#fff; onsor:pointer;}
-		.section-btn li.on{ background:#fff}
-		.arrow{ opacity:1;animation:arrow 3s cubic-bezier(0.5,0,0.1,1) infinite;-webkit-animation:arrow 3s cubic-bezier(0.5,0,0.1,1) infinite;transform:rotate(-90deg);-webkit-transform:rotate(-90deg); position:absolute;bottom:10px;left:50%;margin-left:-30px;width:60px;height:60px;border-radius:100%;-webkit-border-radius:100%;line-height:60px;text-align:center;font-size:20px;color:#fff;border:1px solid #fff;cursor:pointer;overflow:hidden;}
-		.arrow:hover{ animation-play-state:paused;-webkit-animation-play-state:paused;}
-		@keyframes arrow{ %0,%100{bottom:10px; opacity:1;} 50%{bottom:50px; opacity:.5}}
-		@-webkit-keyframes arrow{ %0,%100{bottom:10px; opacity:1;} 50%{bottom:50px; opacity:.5} }
-
-		.span{
-			color: red;
-			font-size: 1.5em;
-		}
-		.to{
-			width: 50%;margin: 30% auto;
-		}
-		@media screen and (min-width: 47.25em){
-		.section-wrap .section .title.active .tit{font-size:3em;}
-		.span{
-			color:red;font-size: 1.3em;
-		}
-		.to{
-			font-size:2em;width: 50%;margin: 25% auto;
-		}
-		.will{
-			margin:5% 0 0 30%;font-size: 1.4em;
-		}
-		}
-		@media screen and (min-width: 58.25em){
-		.section-wrap .section .title.active .tit{font-size:3.5em;}
-		.span{
-			color:red;font-size: 1.5em;
-		}
-		.to{
-			font-size:3em;width: 30%;margin: 50px auto;
-		}
-		.will{
-			margin:3% 0 0 30%;font-size: 1.4em;
-		}
-		}
-	</style>
-</head>
-<body>
-	<section class="section-wrap">
-		<div class="section section-1">
-			<div class="title active">
-				<h1 class="tit animated infinite pulse delay-2s">Liu An <span class="span">Portfolio</span></h1>
-
-				<p class="to">To be, or not to be, That is the Question!</p>
-				<p class="will">--- WILLIAM SHAKESPEARE</p>
-			</div>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liu_An_Portfolio</title>
+    <link rel="stylesheet" href="css/foundation.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-mce-style="color: #0000ff;">
+	<h1 class="hide">Liu An Portfolio</h1>
+	<div class="preloader"></div>
+   	<header id="mainHeader">
+      <div data-sticky-container class="optopp">
+  <div class="title-bar" data-sticky data-options="marginTop:0;">
+    <div class="title-bar-left"><p>Liu An <span style="color:#dc0a18;font-size: 1.25em;">Portfolio</span></p></div>	
+    <div class="title-bar-right">
+      <nav class="small-12 columns mainNav">
+      <h2 class="hide">Main Navigation</h2>
+      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+        <div class="title-bar-right">
+          <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+        </div>
+        </div>
+        <div id="main-menu">
+          <ul id="mainNav">
+            <li><a class="page-scroll" href="#mainHeader">HOME</a></li>
+            <li><a class="page-scroll" href="#info">ABOUT ME</a></li>
+            <li><a class="page-scroll" href="#experience">RESUME</a></li>
+            <li><a class="page-scroll" href="#project">PROJECTS</a></li>
+            <li><a class="page-scroll" href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+  </div>
+</div>
+   		<div id="banner">
+			<picture>
+			<source srcset="images/banner_mobile.png" media="(max-width: 640px)">
+			   <img src="images/banner.png" alt="banner" class="banner">
+			</picture>
 		</div>
+		<div class="my_info">
+		<div class="name" >	
+			<p class="my_name">An Liu</p>
+			<p class='web_developer'> Web Designer & Developer</p>
+		</div>
+		<div class="social-icons">
+			<ul class="top-links">
+				<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100013376169698"><i class="fab fa-facebook"></i></a></li>
+				<li><a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/an-liu-51b95b156/"><i class="fab fa-linkedin"></i></a></li>
+				<li><a target="_blank" href="https://github.com/an-liu1"><i class="fab fa-github"></i></a></li>
+			</ul>
+		</div>
+	</div>
+   	</header>
+
+    <div class="backBut">
+      <a href="#" id="backBut"><img src="images/move-top.png" alt="backtop"></a>
+	</div>
+	
+  	<section>
+		<div class="left">
+				<a data-open="portrait"><img src="images/portrait.jpg" alt="image" width="150" height="150" class ="portrait1"></a>
+				<div class="medium reveal" id="portrait" data-reveal>
+				<button class="close-button" data-close aria-label="Close Reveal" type="button">
+				<span >&times;</span>
+				</button>
+				<img class="img0 portrait1" alt="images">
+				</div>
+				
+				<hr style="border:0;background-color:#ff0000;height:1px;">
+				<ul class="address">
+						 <li><b>NAME :</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An Liu</li>
+						<li><b>PHONE :</b>  &nbsp;&nbsp;&nbsp; +1 519 697 4518</li>
+						<li><b>ADDRESS :</b> 110 Cherryhill Cir,London,ON.</li>
+						<li><b>E-MAIL :</b> &nbsp;&nbsp;&nbsp;&nbsp;andyvviiar@gmail.com</li>
+				</ul>
+			</div>
+			<div class="right">
+				<h2>My Program</h2>
+				<iframe src="https://www.youtube.com/embed/HMGYqL_j4v8" allowfullscreen></iframe>
+			</div>
 	</section>
+		  
+	<div id="contentWidth">
+			<h2 class="title Sp-title">About Me</h2>
+			<div id="info">
+				<div>
+					<p class="na">Experienced web developer and web designer looking for a web developer position, with a specialty in logical thinking and code writing. An energetic, results-driven individual with proven skills in web development using the latest technologies. Thorough understanding of continuous development models to contribute to the success of web development projects. Five years experience in student union in both China and Canada, organizing and getting involved in school and faculty events with most students. Experience in entrepreneurial business and social media management when I created my own business in China.</p>
+				</div>
+					<h2 class="title">My Skills</h2>
+					<div id="box">
+						<img src="images/HTML5.svg" alt="html5" class="img-fluid">
+						<img src="images/CSS3.svg" alt="css3" class="img-fluid">
+						<img src="images/java-script.svg" alt="css" class="img-fluid">
+						<img src="images/xml.svg" alt="hxml" class="img-fluid">
+						<img src="images/SASS.svg" alt="html5" class="img-fluid">
+						<img src="images/gulp.svg" alt="html5" class="img-fluid">
+						<img src="images/php.svg" alt="html5" class="img-fluid">
+						<img src="images/jQuery.svg" alt="html5" class="img-fluid">
+						<img src="images/github.svg" alt="css3" class="img-fluid">
+						<img src="images/laravel.svg" alt="css" class="img-fluid">
+						<img src="images/nodejs.svg" alt="hxml" class="img-fluid">
+						<img src="images/mysql.svg" alt="html5" class="img-fluid">
+						<img src="images/Bootstrap.svg" alt="html5" class="img-fluid">					
+					</div>
+				<div class="skill-phone">
+					<div class="row">
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/HTML5.svg" alt="html5" class="img-fluid">
+						</div>
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/CSS3.svg" alt="css3" class="img-fluid">
+						</div>
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/java-script.svg" alt="css" class="img-fluid">
+						</div>	
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/xml.svg" alt="hxml" class="img-fluid">
+						</div>	
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/SASS.svg" alt="html5" class="img-fluid">
+						</div>	
+						<div class="col-4 col-md-2 mb-2">
+							<img src="images/gulp.svg" alt="html5" class="img-fluid">
+						</div>			
+					</div>
+					<div class="col-4 col-md-2 offset-4 mt-4">
+							<img src="images/php.svg" alt="html5" class="img-fluid">
+						</div>
+					<div class="row mt-4">
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/jQuery.svg" alt="html5" class="img-fluid">
+							</div>
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/github.svg" alt="css3" class="img-fluid">
+							</div>
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/laravel.svg" alt="css" class="img-fluid">
+							</div>	
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/nodejs.svg" alt="hxml" class="img-fluid">
+							</div>	
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/mysql.svg" alt="html5" class="img-fluid">
+							</div>	
+							<div class="col-4 col-md-2 mb-2">
+								<img src="images/Bootstrap.svg" alt="html5" class="img-fluid">
+							</div>						
+						</div>
+					</div>	
+					<!-- <div class="skill">
+						<div class="html5">
+							<object data="images/s1.svg" type="image/svg+xml" class="s1 l"></object>
+							<p class="r">HTML 5 (formerly spelled HTML5) --- I use the basic HTML 5 a lot to build my website strucutre. There are slao some frameworks based on HTML 5 I used, like Foundation, Bootstrap, WorldPress.</p>
+						</div>
+						<div class="css3">
+							<object data="images/s2.svg" type="image/svg+xml" class="s2 r"></object>
+							<p class="l">CSS (Cascading Style Sheets) --- The function of CSS and CSS3 for me is to layout the elements and do some animations to fully show responsive and dynamic page to customers.</p>
+						</div>
+						<div class="js">
+							<object data="images/s3.svg" type="image/svg+xml" class="s3 l"></object>
+							<p class="r">JavaScript often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.</p>
+						</div>
+						<div class="php">
+							<object data="images/s4.svg" type="image/svg+xml" class="s4 r"></object>
+							<p class="l">PHP (Hypertext Preprocessor) is a server-side scripting language designed for Web development, and also used as a general-purpose programming language. It was originally created by Rasmus Lerdorf in 1994.</p>
+						</div>
+				</div>		 -->
+			</div>
+			<section id="experience">
+					<h2 class="title">Resume</h2>
+					<p class="title" style="font-size:1.25em; margin-top: -20px;"><a href="assets/An_Liu_Resume.pdf" target="_blank">Click --->> Download Resume</a></p>
+					<div class="Sbutton">
+						<a class="hollow button alert BuED animated slow">Education</a>
+						<a class="hollow button alert BuEX animated slow">Experience</a>
+					</div>
+					<section class="education">
+						<h3>EDUCATION</h3>
+					<div class="st">
+						<div class="stleft la">2017.09-2019.04</div>
+						<div class="stright ra" style="line-height: 50px;"><div class="Rtitle">Fanshawe College</div>
+						<p><b>Interactive Media Design</b><br>
+							<b>Extra-Curricular Involvement</b>:<br>
+							• Peer Tutor, The President of Fanshawe Chinese Club<br>
+							<b>Coursework</b>:<br>
+							• Multimeida and The Internet  <br>
+							• Digital Media Theory & Project Management<br>
+							• Web development  
+							• Multimedia Production<br>
+							• Multimedia Authoring  
+							</p>
+					</div>
+				</div>
+					<div class="st1">
+							<div class="stleft" id="mobile">2012.09-2016.06</div>
+							<div class="stright lb"><div class="lbd Rtitle">JiangXi Agriculture University</div>
+							<p class="inter"><b>Bachelor of Engineering – Software Engineering</b><br>
+								<b>Extra-Curricular Involvement</b>:<br>
+								• Startup CEO, Freshman Counselor, The Office Director of Student Union<br>
+								<b>Coursework</b>:<br>
+								• Web development technology (Java or .net)
+								• Web development foundation 
+								• JAVA program design<br>
+								• Large database technology (oracle) 
+								• Database principles and application</p>
+						</div>
+							<div class="stleft rb" id="laptop">2012.09-2016.06</div>
+					</div>
+				</section>
 
-	<div class="arrow" onclick="tz()">&laquo;</div>
+					<section class="experience">
+						<h3>EXPERIENCE</h3>
+					<div class="st">
+						<div class="stleft la">2019.02-2019.05</div>
+						<div class="stright ra"><div class="Rtitle">Chuck Howard Associates Inc.</div>
+						<p><b>Web Designer and Developer</b><br>•	Assisted clients in understanding their available options and helped them select the right service plans for their needs.
+							<br>•	Redesigned all the web pages to make it more user-friendly (category,clear structure, obvious product feature)<br>
+							• Rebuilt the web code in MVC structure for later maintenance and updating<br>
+							• Created the database in MySQL and categorized data by applying linking table<br>
+							• Connected the database with web hosting</p>
+					</div>
+					</div>
+					<div class="st1">
+							<div class="stleft" id="mobile1">2018.02-2019.04</div>
+							<div class="stright lb" style="line-height: 50px;"><div class="lbd Rtitle">Fanshawe Chinese Socirty</div>
+							<p class="inter"><b>President </b><br>• Planned and hold activities each month to help new students integrate into campus and Canada life as soon as possible.<br>
+								•	Built FCS official website and social media account<br>
+								•	Organized and hold special event --- Asian Lunar New Year's Party and Mid-Autumn Festival gala, etc. to unit international students.
+								</p>
+						</div>
+							<div class="stleft rb" id="laptop1">2014.11</div>
+					</div>
+					<div class="st">
+							<div class="stleft la">2015.12-2016.04</div>
+							<div class="stright ra"><div class="Rtitle">Global Education & Technology Co., Ltd.</div>
+							<p><b>Teaching Assistant</b><br>•	Assisted professors based on the course schedule<br>
+								•	Marked students’ assignments accurately with strong work ethic<br>
+								• Helped students improve their English skills, 90% of students in my class achieved ideal grades</p>
+						</div>
+					</div>
+						<div class="st1">
+								<div class="stleft" id="mobile2">2014.09-2016.12</div>
+								<div class="stright lb" style="line-height: 50px;"><div class="lbd Rtitle">Farmhouse</div>
+								<p class="inter"><b>Startup CEO </b><br>• Founded Farmhouse, a platform for student societies to organize networking events.<br>
+									• Advertised and promoted the brand to the whole city by social media, leaflets, and interpersonal relationship; the value of Farmhouse was five times more than the initial investment after liquidation<br>
+									• Greeted customers and offered them assistance where possible..
+								</p>
+							</div>
+								<div class="stleft rb" id="laptop2">2014.09-2017.12</div>
+					</div>
+				</section>
+				 </section>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript">
-	!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
-	function tz(){
- 
- window.location.href='portfolio.html';
-}
 
-</script>
+   	<section id="project">
+			<h2 class="title">Projects</h2>
+			<div class="row" id="projectp">
+					<div class="pro1 col-6 p-2">
+						<a href="starship.html""><img src="images/p1p.png" alt="image" class="img-responsive"></a>
+					</div>
+					<div class="pro2 col-6 p-2">
+						<a href="organ-donation.html"><img src="images/organ-donationp.png" alt="image" class="img-responsive"></a>
+					</div>
+					<div class="pro3 col-6 p-2">
+						<a href="heroku.html"><img src="images/7prop.png" alt="image" class="img-responsive"></a>
+					</div>
+					<div class="pro4 col-6 p-2">
+							<a href="resume.html"><img src="images/p2p.png" alt="image" class="img-responsive"></a>
+						</div>
+					<div class="pro5 col-6 p-2">
+						<a href="avapp.html"><img src="images/8pro2p.png" alt="image" class="img-responsive"></a>
+					</div>
+				</div>
+			<div class="row" id="projects">
+				<div class="pro1 col-12 col-md-3 float-left p-2">
+					<a href="starship.html""><img src="images/p1s.png" alt="image" class="img-responsive"></a>
+				</div>
+				<div class="pro2 col-12 col-md-9 float-right p-2">
+					<a href="organ-donation.html"><img src="images/organ-donation.png" alt="image" class="img-responsive"></a>
+				</div>
+				<div class="pro3 col-12 col-md-6 offset-3 p-2">
+					<a href="heroku.html"><img src="images/7pros.png" alt="image" class="img-responsive"></a>
+				</div>
+				<div class="pro4 col-12 col-md-3 p-2 float-right">
+						<a href="resume.html"><img src="images/p2.png" alt="image" class="img-responsive"></a>
+					</div>
+				<div class="pro5 col-12 col-md-9 p-2">
+					<a href="avapp.html"><img src="images/8pro2.png" alt="image" class="img-responsive"></a>
+				</div>
+			</div>
 
-</body>
+			<!-- <div class="wraper">
+		   <div class="p1">
+			  <a data-open="photo1"><picture><source srcset="images/p1_mobile.png" media="(max-width: 735px)"><img src="images/p1.png" alt="image"></picture></a>
+			  <div class="medium reveal" id="photo1" data-reveal>
+			  <button class="close-button" data-close aria-label="Close Reveal" type="button">
+			  <span >&times;</span>
+				</button>
+				<p class="para1" style="text-indent: 30px; font-size: 1.3em;"></p><a href="starship.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+				<hr style="border:0;background-color:#ff0000;height:1px;">
+			  <img class="img1 portrait1" alt="image">
+			  </div>
+		  </div>
+		  <div class="p3">
+					<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+							<div class="orbit-wrapper">
+								<div class="orbit-controls">
+									<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+									<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+								</div>
+								<ul class="orbit-container">
+									<li class="is-active orbit-slide">
+										<figure class="orbit-figure">
+												<figure data-open="photo5"><img class="orbit-image" src="images/slide1.png" alt="Space">
+													<figcaption class="orbit-caption">Agency X--- A site to introduce our team ------- <a style="color:#fff;" href="https://github.com/an-liu1/A2_Week4">https://github.com/an-liu1/A2_Week4</a></figcaption>
+												</figure>
+												<div class="large reveal" id="photo5" data-reveal>
+												<button class="close-button" data-close aria-label="Close Reveal" type="button">
+												<span >&times;</span>
+												</button>
+												<img class="img2 portrait1" alt="image">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para2"></p><a href="agency.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+												</div>
+										</figure>
+									</li>
+									<li class="orbit-slide">
+										<figure class="orbit-figure">
+												<figure data-open="photo6"><img class="orbit-image" src="images/slide2.png" alt="Space">
+													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ <a style="color:#fff;" href="https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic">https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</a></figcaption>
+												</figure>
+												<div class="large reveal" id="photo6" data-reveal>
+												<button class="close-button" data-close aria-label="Close Reveal" type="button">
+												<span >&times;</span>
+												</button>
+												<img class="img3 portrait1" alt="image">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para3"></p><a href="infographic.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+												</div>
+										</figure>
+									</li>
+									<li class="orbit-slide">
+										<figure class="orbit-figure">
+												<figure data-open="photo7"><img class="orbit-image" src="images/slide3.png" alt="Space">
+													<figcaption class="orbit-caption">InfoGraphic --- the dynamic graph ------ <a style="color:#fff;"href="https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic">https://github.com/an-liu1/Liu_An_HW3_InfoGrapgic</a></figcaption>
+												</figure>
+												<div class="large reveal" id="photo7" data-reveal>
+												<button class="close-button" data-close aria-label="Close Reveal" type="button">
+												<span >&times;</span>
+												</button>
+												<img class="img4 portrait1" alt="image">
+												<hr style="border:0;background-color:#ff0000;height:1px;">
+												<p style="text-indent:30px; font-size: 1.3em;" class="para4"></p><a href="infographic.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+												</div>
+										</figure>
+									</li>
+									<li class="orbit-slide">
+											<figure class="orbit-figure">
+													<figure data-open="photo8"><img class="orbit-image" src="images/slide4.png" alt="Space">
+														<figcaption class="orbit-caption">WorldPress Project --- Being familiar with worldpres website building</figcaption>
+													</figure>
+													<div class="large reveal" id="photo8" data-reveal>
+													<button class="close-button" data-close aria-label="Close Reveal" type="button">
+													<span >&times;</span>
+													</button>
+													<img class="img5 portrait1" alt="image">
+													<hr style="border:0;background-color:#ff0000;height:1px;">
+													<p style="text-indent:30px; font-size: 1.3em;" class="para5"></p><a href="worldpress.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+													</div>
+											</figure>
+										</li>
+								</ul>
+							</div>
+						</div>
+			</div>	
+			
+			<div class="inner-box"> 
+			<div class="p2">
+					<a data-open="photo2"><picture><source srcset="images/p2_mobile.png" media="(max-width: 735px)"><img src="images/p2.png" alt="image"></picture></a>
+					<div class="medium reveal" id="photo2" data-reveal>
+					<button class="close-button" data-close aria-label="Close Reveal" type="button">
+					<span >&times;</span>
+					</button>
+					<p  style="text-indent: 30px;  font-size: 1.3em;" class="para6"></p><a href="resume.html" style="color:red;font-weight:bold;margin-left: 40%;font-size: 1.3em;">Read More</a>
+					<hr style="border:0;background-color:#ff0000;height:1px;">
+					<img class="img6 portrait1" alt="image">
+					</div>
+				</div>
+				<div class="ads">
+						<a data-open="photo3"><picture><source srcset="images/p5_mobile.png" media="(max-width: 735px)"><img src="images/p5.png" alt="image"></picture></a>
+						<div class="large reveal" id="photo3" data-reveal>
+						<button class="close-button" data-close aria-label="Close Reveal" type="button">
+						<span >&times;</span>
+						</button>
+						<p  style="text-indent: 30px;  font-size: 1.3em;" class="para8"></p><a href="got.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+						<hr style="border:0;background-color:#ff0000;height:1px;">
+						<img class="img8 portrait1" alt="image">
+						</div>
+			</div>
+					<div class="p4">
+							<a data-open="photo4"><img src="images/p4.png" alt="image"></a>
+							<div class="large reveal" id="photo4" data-reveal>
+							<button class="close-button" data-close aria-label="Close Reveal" type="button">
+							<span >&times;</span>
+							</button>
+							<p  style="text-indent: 30px; font-size: 1.3em;" class="para7"></p><a href="productivity.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+							<hr style="border:0;background-color:#ff0000;height:1px;">
+							<img class="img7 portrait1" alt="image">
+							</div>
+						</div>
+				</div>
+				</div>
+				
+				<div class="row">
+					<div class="p7 col-xs-12 col-md-6 xl-lg-6">
+						<a data-open="photo17"><img src="images/7pro.png" alt="image" class="img-responsive"></a>
+						<div class="large reveal" id="photo17" data-reveal>
+						<button class="close-button" data-close aria-label="Close Reveal" type="button">
+						<span >&times;</span>
+						</button>
+						<p  style="text-indent: 30px; font-size: 1.3em;">Heroku --- This is a project about a product - NICK AIR! In this site, it shows products' information: image, price, description, and category. Customers can get all the information about the product and put them into cart to save them. I built this page with NodeJS and Express. And I also integrated with Heroku and host it live using Heroku account and the command line build tools.</p><a href="heroku.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+						<hr style="border:0;background-color:#ff0000;height:1px;">
+						<img src="images/7pro.png" alt="image">
+						</div>
+					</div>
+
+					<div class="p8 col-xs-12 col-md-6 xl-lg-6">
+						<a data-open="photo18"><img src="images/8pro2.png" alt="image" class="img-responsive"></a>
+						<div class="large reveal" id="photo18" data-reveal>
+						<button class="close-button" data-close aria-label="Close Reveal" type="button">
+						<span >&times;</span>
+						</button>
+						<p  style="text-indent: 30px; font-size: 1.3em;" class="para7">Roku Flashback --- this is an admin project based on the Roku, which provides a method for parents to supervise the item displayed in kid's page. Customers can log in their account, filter and select a movie, tv show or audio based on user profile (adult or kids). In this project, my job is to set up the basic development environment and do the design work(layout deisgn and HTML 5, CSS Markup).</p><a href="avapp.html" style="color:red;font-weight:bold;margin-left: 45%;font-size: 1.3em;">Read More</a>
+						<hr style="border:0;background-color:#ff0000;height:1px;">
+						<img src="images/8pro1.png" alt="image">
+						</div>
+					</div>
+
+					<div class="p9 col-xs-12 col-md-12 xl-lg-12">
+						<a href="organ-donation.html"><img src="images/organ-donation.png" alt="image"></a>
+					</div>
+
+				</div> -->
+   	</section>
+	<!-- <section class="video">
+		<h2 class="title">Video</h2>
+		<p class="ml-2">--- the basic skills of adobe suits</p>
+		<video poster="images/video_banner.png" class="video video1" controls>
+			<source src="video/An_Liu_Portfolio.mp4" type="video/mp4">
+			<source src="video/An_Liu_Portfolio.webm" type="video/webm">
+			<source src="video/An_Liu_Portfolio.Ogg" type="video/ogg">
+		</video>
+		<div class="controls">
+			<div class="progress">
+			<div class="progress__filled"></div>
+			</div>
+			<ul>
+			  <li class="rewind"><i class="fas fa-backward"></i></li>
+			  <li class="play-pause"><i class="fas fa-play-circle"></i></li>
+			  <li class="forward"><i class="fas fa-forward"></i></li>
+			  <li class="fullScreen"><i class="fas fa-arrows-alt"></i></li>
+			  <li class="volume"><i class="fas fa-volume-up"></i></li> 
+			</ul>
+			<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+		 </div>
+	</section> -->
+  
+   	<section id="contact">
+			 <h2 class="title">Contact</h2>
+			 <p id='s' style="color: #dc0a18;"></p>
+		   <form name="contactform" id="contactform" method="post" action="admin/contact_form.php" enctype="multipart/form-data">
+			  <label for="first_name">First Name *</label><p class="f" style="color: #dc0a18;"></p>
+			  <input  type="text" name="first_name" id="first_name" maxlength="50" size="30" placeholder="first_name" >
+			  <label for="last_name">Last Name *</label><p id="l" style="color: #dc0a18;"></p>
+			  <input  type="text" name="last_name" id="last_name" maxlength="50" size="30" placeholder="last_name" >
+			  <label for="email">Email Address *</label><p class="e" style="color: #dc0a18;"></p>
+			  <input  type="text" name="email" id="email" maxlength="80" size="30" placeholder="email" >
+			  <label for="telephone">Telephone Number</label>
+			  <input  type="text" name="telephone" id="telephone" maxlength="30" size="30" placeholder="phone number">
+			  <label for="comments">Comments *</label><p class="c" style="color: #dc0a18;"></p>
+			  <textarea  name="comments" id="comments" maxlength="1000" cols="25" rows="6" placeholder="comments(at least two words)" ></textarea>
+			  <input type="submit" value="Submit" class="submit">
+				<!-- <button type="submit" class="submit">Submit</button> -->
+			</form>
+	</section>
+</div>
+
+    <footer id="footerCon">
+		<h2 class="hide">mainFooter</h2>
+        <div class="cpy-right">
+            <p>© 2018 An Liu Resume. All rights reserved | Design by An.</p>
+    	</div>
+    </footer>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+	</body>
+	<script>
+		const form = document.querySelector('#contactform'),
+			last_name = document.querySelector('#last_name'),
+			first_name = document.querySelector('#first_name'),
+			email = document.querySelector('#email'),
+			comments = document.querySelector('#comments');
+
+		first_name.onblur =function(){
+			var nameformat = /^[a-zA-Z]+[a-zA-Z]+$/;
+
+			if(first_name.value.match(nameformat)){
+				document.querySelector('.f').innerHTML = '';
+			}else{
+				document.querySelector('.f').innerHTML = 'Unvaild name!';
+			}
+		}
+
+		last_name.onblur =function(){
+			var nameformat = /^[a-zA-Z]+[a-zA-Z]+$/;
+			if(last_name.value.match(nameformat)){
+				document.querySelector('#l').innerHTML = '';
+			}else{
+				document.querySelector('#l').innerHTML = 'Unvaild name!';
+			}
+		}
+
+		email.onblur = function(){
+			var email1 = document.querySelector('#email').value,
+					mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			if(email1.match(mailformat)){
+				document.querySelector('.e').innerHTML = '';
+			}else{
+				document.querySelector('.e').innerHTML = 'Fill correct email please!';
+			}
+		}
+
+		comments.onblur = function(){
+			if(comments.value.length > 3){
+				document.querySelector('.c').innerHTML = '';
+			}else{
+				document.querySelector('.c').innerHTML = 'Give me more comments please!';
+			}
+		}
+		
+		form.onsubmit=function(e){
+
+			var xhr = new XMLHttpRequest();
+      		var fd = new FormData(form);
+			
+			e.preventDefault();
+      		xhr.onreadystatechange = function(){
+      		    if(xhr.readyState == 4){
+					console.log(xhr.responseText);
+      		        if(xhr.responseText == 5){
+						document.querySelector('#s').innerHTML = 'Thank you for contacting me. I will be in touch with you very soon.';
+						last_name.innerHTML = '';
+						first_name.innerHTML = '';
+						comments.innerHTML = '';
+						email.innerHTML = '';
+						document.querySelector('#telephone').innerHTML = '';
+					}else if(xhr.responseText == 1){
+						document.querySelector('#s').innerHTML = 'Something Wrong! Checking the information please!';
+					}else if(xhr.responseText == 2){
+						if(first_name.value == ''){
+							document.querySelector('.f').innerHTML = 'Unvaild name!';
+						}else{
+							document.querySelector('.f').innerHTML = '';
+						}
+
+						if(last_name.value == ''){
+							document.querySelector('#l').innerHTML = 'Unvaild name!';
+						}else{
+							document.querySelector('#l').innerHTML = '';
+						}
+
+						if(email.value == ''){
+							document.querySelector('.e').innerHTML = 'Fill correct email please!';
+						}else{
+							document.querySelector('.e').innerHTML = '';
+						}
+
+						if(comments.value == ''){
+							document.querySelector('.c').innerHTML = 'Give me more comments please!';
+						}else{
+							document.querySelector('.c').innerHTML = '';
+						}
+					}
+				}
+      		};
+		  
+      		xhr.open('post','admin/contact_form.php');
+      		// xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      		xhr.send(fd);
+		}
+	</script>
+	<script>
+		window.onload=function (  ) {
+			   var oWrap=document.querySelector('#box');
+			   var oImg=oWrap.children;
+			   var deg=360/oImg.length;
+			   var roX=-10;
+			   var roY=0;
+			   var x,y,x_,y_,xN,yN,time=null;
+				for(var i=0;i<oImg.length;i++){
+					oImg[i].style.transform = 'rotateY('+ i*deg + 'deg) translateZ(350px)';
+					oImg[i].style.transition =' all 1s '+ (oImg.length-i-1)*0.1 +'s';
+					oImg[i].ondragstart=function (  ) {
+					return false;
+				}
+				}
+			   document.onmousedown=function ( e ) {
+				   clearInterval(time);
+				   e=e||window.event;
+				   x_=e.clientX;
+				   y_=e.clientY;
+				   this.onmousemove=function ( e ) {
+					e=e||window.event;
+					 x=e.clientX;
+					 y=e.clientY;
+					   xN=x-x_;
+						yN=y-y_;
+					   roY+=xN*0.2;
+					   roX-=yN*0.2;
+					   oWrap.style.transform='perspective(800px) rotateX('+roX+'deg) rotateY('+roY+'deg)';
+					   x_=e.clientX;
+					   y_=e.clientY;
+				   }
+				   this.onmouseup=function (  ) {
+					   this.onmousemove= null;
+					  time=setInterval(function (  ) {
+					xN*=0.95;
+					yN*=0.95;
+					if(Math.abs(xN)<0.1 && Math.abs(yN)<0.1){
+						clearInterval(time);
+					}
+				roY+=xN*0.2;
+				roX-=yN*0.2;
+				oWrap.style.transform='perspective(800px) rotateX('+roX+'deg) rotateY('+roY+'deg)';
+			},30)
+				   }
+			   }
+		}
+		
+	</script>
+
 </html>

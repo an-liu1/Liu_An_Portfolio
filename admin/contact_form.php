@@ -1,40 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/contact_form.css">
-  <title>Contact Me</title>
-</head>
-<body>
 <?php
-if(isset($_POST['email'])) {
- 
     $email_to = "andyvviiar@andyliu.cloud";
     $email_subject = "Someone contatct you!";
  
-    function died($error) {
-        
-        // error code
-        echo "<div class=\"wrong\">We are very sorry, but there were error(s) found with the form you submitted. These errors appear below.<br /></div>";
-        echo "<div class=\"wrong\">".$error."</div>";
-        echo "<div class=\"wrong\">Please go back and fix these errors.</div>";
-        echo "<div class=\"button\"><a href=\"../index.html#contact\">Go Back</a></div>";
-        die();
-    }
- 
- 
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
-        !isset($_POST['last_name']) ||
-        !isset($_POST['email']) ||
-        !isset($_POST['telephone']) ||
-        !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+    if(empty($_POST['first_name']) ||
+        empty($_POST['last_name']) ||
+        empty($_POST['email']) ||
+        empty($_POST['comments'])) {
+        echo 2;
+        die();       
     }
- 
-     
  
     $first_name = $_POST['first_name']; // required
     $last_name = $_POST['last_name']; // required
@@ -42,30 +17,30 @@ if(isset($_POST['email'])) {
     $telephone = $_POST['telephone']; // not required
     $comments = $_POST['comments']; // required
  
-    $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+  //   $error_message = "";
+  //   $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
  
-  if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
+  // if(!preg_match($email_exp,$email_from)) {
+  //   $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+  // }
  
-    $string_exp = "/^[A-Za-z .'-]+$/";
+  //   $string_exp = "/^[A-Za-z .'-]+$/";
  
-  if(!preg_match($string_exp,$first_name)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
+  // if(!preg_match($string_exp,$first_name)) {
+  //   $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+  // }
  
-  if(!preg_match($string_exp,$last_name)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
+  // if(!preg_match($string_exp,$last_name)) {
+  //   $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+  // }
  
-  if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
-  }
+  // if(strlen($comments) < 2) {
+  //   $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+  // }
  
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
+  // if(strlen($error_message) > 0) {
+  //   died($error_message);
+  // }
  
     $email_message = "Form details below.\n\n";
  
@@ -87,17 +62,10 @@ if(isset($_POST['email'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers)
-
-
-?>
- 
-<div class="success">Thank you for contacting me. I will be in touch with you very soon.</div><br>
-<div class="button"><a href="../index.html#contact">Go Back</a></div>
- 
- 
-<?php
+if(@mail($email_to, $email_subject, $email_message, $headers)){
+  echo 5;
+}else{
+  echo 1;
 }
+
 ?>
-</body>
-</html>
